@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FCE7DC;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D3C2B5;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.profile-container {
+    display: flex;
+    margin: 80px auto;
+    width: 80%;
+}
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.sidebar h1 {
+    font-weight: bold;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+.sidebar ul li a.active {
+    border-left: 3px solid red;
+    font-weight: bold;
+}
+.logout {
+    display: block;
+    margin-top: 20px;
+    color: black;
+    text-decoration: none;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+}
+.profile-card {
+    width: 70%;
+    padding: 20px;
+    background-color: #FFEFE6;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+.profile-card h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.profile-form {
+    display: flex;
+    flex-direction: column;
+}
+.profile-form label {
+    margin: 10px 0 5px;
+}
+.profile-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #E0E0E0;
+}
+.password-change {
+    color: red;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: font-size 0.2s ease;
+}
+.password-change:hover {
+    font-size: 1.1em;
+}
+.save-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100px;
+}
+.save-btn:hover {
+    background-color: darkred;
+}
+.logo{
+    text-align: center;
+    margin: auto;
+  }
+.logo img {
+    width: 110px;
+    height: 110px;
+    background-color: #ddd;
+    border-radius: 50%;
+}

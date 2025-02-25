@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Szerkesztése</title>
+    <link rel="stylesheet" href="css/profil.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/logo.jpg" alt="N&R Nails Logo" class="nailslogo">
+        </div>
+    </header>
+    <div class="container">
+        <aside class="menu">
+            <h1>Profilom</h1>
+            <ul>
+                <li class="active">Személyes adataim</li>
+                <li>Foglalások</li>
+                <li>Értékelések</li>
+            </ul>
+            <div class="logout">Kijelentkezés</div>
+        </aside>
+        <main class="content">
+            <h2><em>Személyes adataim</em></h2>
+            <form class="profile-form">
+                <label for="name">Név</label>
+                <input type="text" id="name" name="name" value="N&R Nails Studio">
+                
+                <label for="phone">Telefonszám</label>
+                <input type="text" id="phone" name="phone" value="06202908157">
+                
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" value="n&r.nails@gmail.com">
+                
+                <div class="form-actions">
+                    <a href="#" class="password-change">Jelszó módosítása</a>
+                    <button type="submit" class="save-btn">Mentés</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+</body>
+<script src=".js/profil.js"></script>
+</html>

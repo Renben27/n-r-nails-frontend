@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+}
+
+/* Általános stílusok */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFE7DA;
+}
+
+/*fejléc beállitasai*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #D3C2B5;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: sticky;
+}
+
+.kalam-regular {
+    font-family: "Kalam", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.profile-icon i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    margin-top: 23px;
+    transition: ease 500ms;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+.logo img {
+    width: 110px;
+    height: 110px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+
+/*törzsben lévő dolgok beállításai*/
+/* Kártyák konténer */
+.cards-container {
+    display: grid;
+    /* Grid layout a kártyákhoz */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 oszlopos elrendezés */
+    gap: 10px;/* Helyközök csökkentése */
+    justify-content: center; /* Középre igazítás */
+    padding: 20px; /* Extra térköz a konténerben */
+}
+
+/* Kártya konténer */
+.card {
+    display: flex;;
+    /* Flexbox a kép és tartalom igazításához */
+    max-width: 500px;
+    /* Maximális szélesség */
+    background-color: #e8d6cc;
+    /* Háttérszín */
+    border-radius: 20px;
+    /* Lekerekített sarkok */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    /* Árnyék */
+    overflow: hidden;
+    /* A kerekített szélek miatt ne lógjon ki a kép */
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+/* Kártya kép beállításai */
+.card-image {
+    width: 50%;
+    height: auto;
+    /* Kép a kártya bal oldalán, fél szélesség */
+    object-fit: cover;
+    /* Kép kitöltése */
+}
+
+/* Kártya tartalmának beállítása */
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;    /* Tartalom függőleges elrendezése */
+    justify-content: center;
+    text-align: left;
+    /* Balra igazítás */
+}
+
+/* Cím stílus */
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Szöveg stílus */
+p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Gomb stílus */
+#pedikur-button, #gellak-button, #extram-button, #mbuild-button, #specials-button, #weddingm-button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #6b5845;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Gomb hover effekt */
+#pedikur-button:hover, #gellak-button:hover, #extram-button:hover, #mbuild-button:hover, #specials-button:hover , #weddingm-button:hover {
+    background-color: #4d3c2e;
+}
+
+/*fejléc beállitasai*/
+footer {
+    background-color: #d3bfb4;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-top: none;
+    /* Ha a lábléc okoz egy felső vonalat */
+}
+
+footer p {
+    margin: 0;
+    color: black;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item img {
+    width: 24px;
+    /* Ikon mérete */
+    height: 24px;
+}
+
+.contact-item span {
+    font-size: 16px;
+    color: #000;
+    /* Szöveg színe */
+}
+
+.contact-section span {
+    font-weight: 500;
+}
+
+@media (max-width: 750px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        /* Egy oszlopos elrendezés kisebb képernyőkön */
+    }
+    
+}
+@media (max-width: 1000px) {
+    .card {
+        max-width: 90%; /* Kártya szélessége kisebb eszközökön */
+        min-height: 90%;
+    }
+
+    .card-title {
+        font-size: 1.2rem; /* Cím betűméretének csökkentése */
+    }
+
+    p {
+        font-size: 0.8rem; /* Szövegméret kisebb képernyőkön */
+    }
+
+    .card-button {
+        padding: 8px 16px; /* Gomb kisebb méretben */
+        font-size: 0.9rem;
+    }
+}

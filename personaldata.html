@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/personaldata.css">
+    <title>Személyesdataim</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/logo.jpg" alt="N&R Nails Logo" class="nailslogo">
+        </div>
+    </header>
+
+
+    <div class="container">
+        <h2>Profil Beállítások</h2>
+        <div class="profile-pic">
+            <input type="file" id="fileInput" accept="image/*">
+            <button type="button">Feltöltés</button>
+        </div>
+        <form id="profileForm">
+            <label for="felhasznev">Felhasználónév:</label>
+            <input type="text" id="felhasznev">
+            <button type="button"id="mentes">Mentés</button>
+            <br>
+            <main>
+                <div class="cim">
+                    Jelszó módosítása
+                </div>
+        
+                <div class="input">
+                    <input type="password" id="psw" placeholder="*********">
+                </div>
+        
+                <div class="input">
+                    <input type="password" id="psw2" placeholder="*********">
+                </div>
+                
+                <div class="edit-button">
+                    <button type="button">Mentés</button>
+                </div>
+            </main>
+        </form>
+        <button id="logout">Kijelentkezés</button>
+    </div>
+
+    <div class="contact-section">
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>+36-20/30/70-340 93 20</span>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-facebook"></i>
+          <span>N&R Nails</span>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>nrnails@gmail.com</span>
+        </div>
+      </div>
+    
+    
+      <footer>
+        <p>&copy; 2025 N&R Nails. Minden jog fenntartva.</p>
+      </footer>
+    <script src=".js/personaldata.js"></script>
+</body>
+</html>
