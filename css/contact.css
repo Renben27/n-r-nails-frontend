@@ -27,7 +27,7 @@ body {
     background-color: #fff8f0;
     border-radius: 8px;
 }
-
+/*fejléc*/
 header {
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,7 @@ header {
     font-style: normal;
   }
 
-  .profile-icon i {
+.profile-icon i {
     display: flex;
     font-size: 45px;
     margin-top: 23px;

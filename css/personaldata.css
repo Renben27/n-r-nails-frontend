@@ -1,97 +1,130 @@
+*{
+    margin: 0;
+}
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9e9e3;
+    background-image: url('/images/hatter14.jpg'); /*Itt cseréld ki az elérési útra */
+    background-size: cover; /* A kép kitölti az egész hátteret */
+    background-position: center; /* A kép középre lesz igazítva */
+    background-repeat: no-repeat; /* Nem ismétlődik a kép */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     font-size: 20px;
 }
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #D3C2B5;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    position: fixed;
-    width: 100%;
-}
-.jim-nightshade-regular {
-    font-family: "Jim Nightshade", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 60px;
-    color: #000000;
+.header {
     position: relative;
-    margin-bottom: 20px;
-    /* Csökkenti a szöveg alatti távolságot */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Balra igazítás */
+    padding-left: 20px; /* Kis távolság a bal szélétől */
+    position: absolute;
+    left: 0;
+    top: 0;
 }
-.kalam-regular {
-    font-family: "Kalam", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-.logo{
-    text-align: center;
-    margin: auto;
-  }
-.logo img {
+.header img {
     width: 110px;
     height: 110px;
-    background-color: #ddd;
     border-radius: 50%;
+    position: absolute;
+    left: 20px; /* Bal szélére helyezés */
 }
-.container{
-    max-width: 800px;
-    margin-top: 135px;
-    padding: 20px;
-    background-color: inherit;
+.container {
+    margin: 100px;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 1000px;
+    background: #fff;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
-
-/*fejléc beállitasai*/
-footer {
-    background-color: #d3bfb4;
-    text-align: center;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-top: none;
-    /* Ha a lábléc okoz egy felső vonalat */
-}
-
-footer p {
-    margin: 0;
-    color: black;
-}
-
-.contact-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.sidebar {
+    width: 250px;
+    background: #d3c7c0;
     padding: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 40px;
 }
-
-.contact-item {
+.sidebar h2 {
+    font-size: 26px;
+    padding-bottom: 10px;
+    
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    padding: 12px;
+    cursor: pointer;
+}
+.sidebar ul .active {
+    border-left: 4px solid red;
+}
+.sidebar .logout {
+    margin-top: 25px;
+    font-weight: bold;
+}
+.content {
+    flex: 1;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 50px;
 }
-
-.contact-item img {
-    width: 24px;
-    /* Ikon mérete */
-    height: 24px;
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
 }
-
-.contact-item span {
-    font-size: 16px;
-    color: #000;
-    /* Szöveg színe */
+h3 {
+    font-size: 35px;
+    font-style: italic;
 }
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
+}
+label {
+    margin-top: 25px;
+    text-align: left;  
+    font-size: 23px;
+    font-weight: bold;
 
-.contact-section span {
-    font-weight: 500;
+}
+input {
+    padding: 10px;
+    margin-top: 2px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 20px;
+    width: 100%;
+}
+.change-password {
+    color: red;
+    margin-top: 25px;
+    text-decoration: none;
+    font-size: 26px;
+}
+button {
+    margin-top: 30px;
+    background: red;
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 25px;
 }
