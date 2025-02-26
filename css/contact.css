@@ -1,3 +1,6 @@
+* {
+    margin: 0;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -30,7 +33,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #D3C2B5;
+    background-color: inherit;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -44,12 +47,11 @@ header {
     font-style: normal;
   }
 
-.profile-icon i{
+  .profile-icon i {
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 45px;
     margin-top: 23px;
+    margin-right: 30px;
     transition: ease 500ms;
 }
 

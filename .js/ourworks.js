@@ -8,21 +8,27 @@ profileIcon.addEventListener('click', () => {
 nailsLogo.addEventListener('click', () => {
     window.location.href = ('./home.html');
 });
+
+//képek megjelenítése feltöltés után KÉSZ
 document.addEventListener("DOMContentLoaded", async function () {
     const gallery = document.getElementById("gallery");
     const modal = document.getElementById("imageModal");
+    modal.style.display = "none";
     const modalImg = document.getElementById("modalImage");
     const closeBtn = document.querySelector(".close");
 
     // Adatbázisból kép lekérése
     async function fetchImages() {
         try {
-            const response = await fetch("http://localhost:3000/images");
+            const response = await fetch("http://localhost:3000/api/images", {
+                method: 'GET',
+                credentials: 'include'
+            });
             const images = await response.json();
 
             images.forEach(image => {
                 const imgElement = document.createElement("img");
-                imgElement.src = image.url;
+                imgElement.src = `http://127.0.0.1:3000/uploads/${image.kep}`;
                 imgElement.alt = "Gallery Image";
                 imgElement.addEventListener("click", function () {
                     modal.style.display = "flex";
@@ -51,7 +57,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
 
-//kattintás a képekre
+//kattintás a képekre KÉSZ
 document.addEventListener("DOMContentLoaded", function () {
     // Összes kép kiválasztása a .gallery div-en belül
     const images = document.querySelectorAll(".gallery img");
@@ -65,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//
+//kattintásra hogy jelenjen meg
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".gallery img"); // Összes kép kiválasztása
     const overlay = document.getElementById("fullscreenOverlay"); // Fekete háttér
