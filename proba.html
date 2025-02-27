@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking Calendar</title>
+    <link rel="stylesheet" href="proba.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prev-month">&lt;</button>
+            <span id="month-year"></span>
+            <button id="next-month">&gt;</button>
+        </div>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+                <!-- Calendar dates will be generated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="booking-form">
+        <h2>Book an Appointment</h2>
+        <form id="appointment-form">
+            <label for="appointment-date">Date:</label>
+            <input type="text" id="appointment-date" name="appointment-date" readonly>
+            <label for="appointment-time">Time:</label>
+            <input type="time" id="appointment-time" name="appointment-time" required>
+            <button type="submit">Book</button>
+        </form>
+    </div>
+
+    <script src="proba.js"></script>
+</body>
+</html>
