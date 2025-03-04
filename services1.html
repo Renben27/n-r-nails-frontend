@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foglalj most!</title>
+    <link rel="stylesheet" href="/css/services1.css">
+
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="icons">
+            <img src="back.png" alt="Vissza">
+            <img src="profile.png" alt="Profil">
+        </div>
+    </div>
+    <h1><em>Foglalj most!</em></h1>
+    <div class="container">
+        <div class="card">
+            <img src="nails.jpg" alt="Műköröm">
+            <h2>MŰKÖRÖM <br> <small>(extra)</small></h2>
+            <ul>
+                <li>☑ extra hosszú műköröm építése, egyszerű, díszítés nélkül</li>
+                <li>☑ extra hosszú műköröm építése, színes, díszítéssel</li>
+                <li>☑ Egyedi alak, díszítéssel megegyezés alapján!</li>
+            </ul>
+        </div>
+    </div>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prev-month">&lt;</button>
+            <span id="month-year"></span>
+            <button id="next-month">&gt;</button>
+        </div>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+                <!-- Calendar dates will be generated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="booking-form">
+        <h2>Book an Appointment</h2>
+        <form id="appointment-form">
+            <label for="appointment-date">Date:</label>
+            <input type="text" id="appointment-date" name="appointment-date" readonly>
+            <label for="appointment-time">Time:</label>
+            <input type="time" id="appointment-time" name="appointment-time" required>
+            <button type="submit">Book</button>
+        </form>
+    </div>
+    <button class="button">Módosítás</button>
+    <div class="contact">
+        📞 +36-20/30/70-340 93 20 | <img src="facebook.png"> N&R Nails | ✉ n&rnails@gmail.com
+    </div>
+    <script src="proba.js"></script>
+</body>
+</html>
