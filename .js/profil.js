@@ -1,17 +1,24 @@
-// profile.js - Frontend JavaScript fájl
-
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('.profile-form');
+    const form = document.getElementsByClassName('save-btn')[0];
     const passwordChangeLink = document.querySelector('.password-change');
 
     // Űrlap elküldése
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+
+        if (name === null && phone === null && email === null) {
+            alert('Minden mezőt tölts ki');
+            return;
+        }
+
         const profileData = {
-            name: form.name.value,
-            phone: form.phone.value,
-            email: form.email.value
+            name: name,
+            phone: phone,
+            email: email
         };
 
         try {
