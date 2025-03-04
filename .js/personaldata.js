@@ -1,114 +1,53 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const editName = document.getElementById("felhasznev");
-    const editPsw = document.getElementsByClassName('edit-button')[0];
-    const fileInput = document.getElementById("fileInput");
-    const logoutButton = document.getElementById("logout");
-    const saveNameButton=document.getElementById("mentes");
-    const nailsLogo=document.getElementsByClassName("nailslogo")[0];
+const nailsLogo = document.getElementsByClassName('logo')[0];
+nailsLogo.addEventListener('click', () => {
+    window.location.href = ('./home.html');
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementsByClassName('save-btn')[0];
+    const passwordChangeLink = document.querySelector('.password-change');
+   
+    // Űrlap elküldése
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
 
-    nailsLogo.addEventListener('click', () => {
-        window.location.href = ('../home.html');
-    });
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
 
-
-    // **Profilnév módosítása**
-    saveNameButton.addEventListener('click', editProfileName);
-    async function editProfileName() {
-        const felhasznev = document.getElementById('felhasznev').value;
-        console.log(felhasznev);
-        const res = await fetch(`/api/editProfileName`, {
-            method: "PUT",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify({ felhasznev }),
-            credentials: 'include'
-        });
-        const data = await res.json();
-        console.log(data);
-        if (res.ok) {
-            alert(data.message);
-            window.location.href = '../personaldataok.html';
-        } else {
-            alert(data.console.error);
-        }
-    };
-
-
-
-    editPsw.addEventListener('click', editProfilePsw);
-    //profiljelszó módosítása
-    async function editProfilePsw() {
-        const psw= document.getElementById('psw').value;
-        const psw2= document.getElementById('psw2').value;
-        console.log(psw);
-        if (psw!==psw2) {
-            return alert('A két jelszó nem egyezik!');
-    
-        }
-        const res= await fetch('/api/editProfilePsw',  {
-            method:'PUT',
-            headers:{
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify({ psw }),
-            credentials: 'include'
-        });
-        console.log(res);
-         const data= await res.json();
-         console.log(data);
-         if (res.ok) {
-            alert(data.message);
-            logout();
-         }else{
-            alert(data.error);
-         }
-    }
-//
-    // **Képfeltöltés**
-    document.querySelector(".profile-pic button").addEventListener("click", async function () {
-        const file = fileInput.files[0];
-        if (!file) {
-            alert("Válassz egy képet!");
+        if (name === null && phone === null && email === null) {
+            alert('Minden mezőt tölts ki');
             return;
         }
 
-        const formData = new FormData();
-        formData.append("kep", file);
+        const profileData = {
+            name: name,
+            phone: phone,
+            email: email
+        };
 
         try {
-            const response = await fetch(`/api/upload`, {
-                method: "POST",
-                body: formData,
-                credentials: 'include'
+            const response = await fetch('/api/profile', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(profileData)
             });
 
-            const data = await response.json();
-            alert(data.message);
-
+            if (response.ok) {
+                alert('A profiladatok sikeresen frissítve!');
+            } else {
+                alert('Hiba történt a profiladatok frissítése közben.');
+            }
         } catch (error) {
-            console.error("Hiba történt:", error);
+            console.error('Hálózati hiba:', error);
+            alert('Hálózati hiba lépett fel.');
         }
     });
 
-    // **Kijelentkezés**
-    logoutButton.addEventListener("click", async function () {
-        try {
-            const response = await fetch(`/api/logout`, {
-                method: "POST",
-                credentials: 'include'
-            });
-
-            const data = await response.json();
-            alert(data.message || "Hiba történt!");
-
-            if (response.ok) {
-                localStorage.removeItem("token");
-                window.location.href = "/login.html";
-            }
-
-        } catch (error) {
-            console.error("Hiba történt:", error);
-        }
+    // Jelszó módosítás link eseménye
+    passwordChangeLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = '/password-change'; // Átirányítás a jelszó módosítási oldalra
     });
 });

@@ -3,46 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/personaldata.css">
-    <title>Személyesdataim</title>
-</head>
-<body>
-  <div class="header">
-    <img src="/images/logo.jpg" alt="Logo">
-</div>
-
-
-<div class="container">
-    <aside class="sidebar">
-        <h2>Profilom</h2>
-        <nav>
-            <ul>
-                <li class="active">Személyes adataim</li>
-                <li>Foglalások</li>
-                <li>Értékelések</li>
-                <li class="logout">Kijelentkezés</li>
-            </ul>
-        </nav>
-    </aside>
-    <main class="content">
-        <div class="personal-info">
-            <h3><em>Személyes adataim</em></h3>
-            <form>
-                <label for="name">Név</label>
-                <input type="text" id="name" value="N&R Nails Studio" disabled>
-
-                <label for="phone">Telefonszám</label>
-                <input type="text" id="phone" value="06202908157" disabled>
-
-                <label for="email">E-mail</label>
-                <input type="email" id="email" value="n&rnails@gmail.com" disabled>
-
-                <a href="#" class="change-password">Jelszó módosítása</a>
-                <button type="submit">Mentés</button>
-            </form>
+    <link rel="stylesheet" href="/css/personaldata.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Profilom</title>
+    <body>
+        <header>
+        <img src="/images/logo.jpg" alt="Logo" class="logo">
+        <div class="profil-icon">
+        </header>
+        <div class="container">
+            
+            <div class="doboz">
+                <h1>Profilom</h1>
+            </div>
+        
+            <div class="profile">
+                <div class="menu">   
+                    <a href="#">Személyes adataim</a>
+                    <a href="#">Foglalások</a>
+                    <a href="#">Értékelések</a>
+                    <div class="logout">
+                        <a href="#">Kijelentkezés</a>
+                    </div>
+                </div>
+        
+                <div class="content">
+                    <h2>Személyes adataim</h2>
+        
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Név</label>
+                            <input type="text" id="name" name="name" value="N&R Nails Studio">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="phone">Telefonszám</label>
+                            <input type="text" id="phone" name="phone" value="06202908157">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" value="n&rnails@gmail.com">
+                        </div>
+                        <a href="#" class="change-password">Jelszó módosítása</a>
+                        <button type="submit" class="save-btn">Mentés</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </main>
-</div>
-    <script src=".js/personaldata.js"></script>
-</body>
-</html>
+        
+        </body>
+        <script src=".js/personaldata.js"></script>
+        </html>
+        
