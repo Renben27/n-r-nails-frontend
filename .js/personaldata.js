@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function editProfileName() {
         const felhasznev = document.getElementById('felhasznev').value;
         console.log(felhasznev);
-        const res = await fetch(`http://localhost:3000/api/editProfileName`, {
+        const res = await fetch(`/api/editProfileName`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return alert('A két jelszó nem egyezik!');
     
         }
-        const res= await fetch('http://localhost:3000/api/editProfilePsw',  {
+        const res= await fetch('/api/editProfilePsw',  {
             method:'PUT',
             headers:{
                 'content-type' : 'application/json'
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("kep", file);
 
         try {
-            const response = await fetch(`http://localhost:3000/api/upload`, {
+            const response = await fetch(`/api/upload`, {
                 method: "POST",
                 body: formData,
                 credentials: 'include'
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // **Kijelentkezés**
     logoutButton.addEventListener("click", async function () {
         try {
-            const response = await fetch(`http://localhost:3000/api/logout`, {
+            const response = await fetch(`/api/logout`, {
                 method: "POST",
                 credentials: 'include'
             });

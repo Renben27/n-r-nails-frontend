@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Adatbázisból kép lekérése
     async function fetchImages() {
         try {
-            const response = await fetch("http://localhost:3000/api/images", {
+            const response = await fetch("/api/images", {
                 method: 'GET',
                 credentials: 'include'
             });
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             images.forEach(image => {
                 const imgElement = document.createElement("img");
-                imgElement.src = `http://127.0.0.1:3000/uploads/${image.kep}`;
+                imgElement.src = `/uploads/${image.kep}`;
                 imgElement.alt = "Gallery Image";
                 imgElement.addEventListener("click", function () {
                     modal.style.display = "flex";
