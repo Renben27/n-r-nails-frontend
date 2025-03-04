@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 50px;
 }
 .logo {
     width: 80px;
@@ -29,12 +30,13 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 50px;
     margin-top: 30px;
+    
 }
 .card {
-    display: flex;;
+    display: flex;
     /* Flexbox a kép és tartalom igazításához */
     max-width: 500px;
     /* Maximális szélesség */
@@ -140,9 +142,9 @@ p {
 }
 
 .booking-form {
-    display: none;
     flex-direction: column;
     align-items: center;
+    display: none;
 }
 
 .booking-form h2 {
@@ -156,4 +158,59 @@ p {
 
 .booking-form form label, .booking-form form input, .booking-form form button {
     margin-bottom: 10px;
+}
+
+.container-card {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+}
+
+.profile-icon {
+    position: absolute;
+    top: 20px;
+    /* Felső távolság */
+    right: 20px;
+    /* Jobb oldali távolság */
+    font-size: 45px;
+    /* Ikon mérete */
+    margin-top: 23px;
+}
+
+.back-arrow {
+    position: fixed; /* Rögzített pozíció az oldalon */
+    top: 20px; /* Az oldal tetejétől 20px-re */
+    right: 20px; /* Az oldal jobb szélétől 20px-re */
+    z-index: 100; /* Biztosítja, hogy az elem mindig látszódjon */
+}
+
+.back-arrow i {
+    text-decoration: none;
+    background-color: #000000; /* Nyíl hátterének színe */
+    color: rgb(216, 210, 198);
+    padding: 10px;
+    border-radius: 50%; /* Kör alakú gomb */
+    display: inline-block;
+    font-size: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.header-icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex; /* Ikonok egymás mellé helyezése */
+    gap: 15px; /* Távolság a két ikon között */
+    align-items: center; /* Függőleges középre igazítás */
+}
+
+/* A back-arrow és a profile-icon maradhat így */
+.back-arrow i, .profile-icon i {
+    background-color: #000000;
+    color: rgb(216, 210, 198);
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 40px;
+    transition: background-color 0.3s ease;
 }
