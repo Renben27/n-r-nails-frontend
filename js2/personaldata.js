@@ -14,20 +14,22 @@ async function loadData() {
         method: 'GET',
         credentials: 'include'
     })
+    console.log(res);
     if (!res.ok) {
         console.error("Hiba az API hívásban");
         return;
     }
     const data = await res.json();
+    console.log(data);
 
     renderCurrentData(data);
 }
 
 function renderCurrentData(data) {
     // HTML elemek kiválasztása
-    document.getElementById('name').value = data.name || "";
+    document.getElementById('name').value = data.nev || "";
     document.getElementById('email').value = data.email || "";
-    document.getElementById('phone').value = data.phone || "";
+    document.getElementById('phone').value = data.telefon || "";
 }
 
 
@@ -81,5 +83,3 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = '/password-change'; // Átirányítás a jelszó módosítási oldalra
     });
 });
-
-//kijelentkezés
