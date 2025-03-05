@@ -5,7 +5,7 @@
 /* Általános stílusok */
 body {
     font-family: Arial, sans-serif;
-    background-color: #FFE7DA;
+    background-color: #ebc6eb;
 }
 
 /*fejléc beállitasai*/
@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #D3C2B5;
+    background-color: #886383;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -43,7 +43,6 @@ header {
 .logo img {
     width: 110px;
     height: 110px;
-    background-color: #ddd;
     border-radius: 50%;
 }
 
@@ -66,7 +65,7 @@ header {
     /* Flexbox a kép és tartalom igazításához */
     max-width: 500px;
     /* Maximális szélesség */
-    background-color: #e8d6cc;
+    background-color: #ebc6eb;
     /* Háttérszín */
     border-radius: 20px;
     /* Lekerekített sarkok */
@@ -119,7 +118,7 @@ p {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background-color: #6b5845;
+    background-color: #886383;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -128,12 +127,12 @@ p {
 
 /* Gomb hover effekt */
 #pedikur-button:hover, #gellak-button:hover, #extram-button:hover, #mbuild-button:hover, #specials-button:hover , #weddingm-button:hover {
-    background-color: #4d3c2e;
+    background-color: #584852;
 }
 
 /*fejléc beállitasai*/
 footer {
-    background-color: #d3bfb4;
+    background-color: #886383;
     text-align: center;
     padding: 10px 20px;
     margin-top: 20px;

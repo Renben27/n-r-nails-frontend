@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f9e9e3;
+    background-color: #ebc6eb;
     font-size: 20px;
 }
 
@@ -10,7 +10,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #D3C2B5;
+    background-color: #886383;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -57,14 +57,13 @@ header {
 .logo img {
     width: 110px;
     height: 110px;
-    background-color: #ddd;
     border-radius: 50%;
 }
 
 .hero {
     position: relative;
     text-align: center;
-    color: #6F5B4C;
+    color: #886383;
     padding: 100px;
     overflow: hidden;
 }
@@ -76,11 +75,11 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/images/rolunkhatter.jpg');
+    background-image: url('/images/szalon3.webp');
     /* Háttérkép helye */
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.3;
     /* A kép 50%-os átlátszósága */
     z-index: 1;
     /* A háttér legyen alatta */
@@ -126,7 +125,7 @@ h1 {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fdf3ee;
+    background-color: #886383;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -151,7 +150,7 @@ h1 {
 .content h2 {
     font-size: 34px;
     margin-top: 20px;
-    color: #806754;
+    color: #886383;
     text-align: center;
 }
 
@@ -178,7 +177,7 @@ footer {
     margin-top: 20px;
     text-align: center;
     padding: 20px;
-    background-color: #d3c7c0;
+    background-color: #886383;
     font-size: 14px;
 }
 
@@ -218,7 +217,7 @@ footer {
     right: 1%;
     top: 75%;
     z-index: 1000;
-    background-color: #d3bfb4;
+    background-color: #886383;
     width: 60px;
     height: 60px;
     border-radius: 50%;

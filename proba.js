@@ -9,43 +9,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentDate = new Date();
 
+
+//naptár megjelenítése, napok kiválasztása//
     function renderCalendar() {
         const currentYear = currentDate.getFullYear();
         const currentMonth = currentDate.getMonth();
         const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
         const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-
+    
         monthYear.textContent = `${currentDate.toLocaleString("default", { month: "long" })} ${currentYear}`;
         calendarBody.innerHTML = "";
-
+    
         let date = 1;
         for (let i = 0; i < 6; i++) {
             const row = document.createElement("tr");
-
+    
             for (let j = 0; j < 7; j++) {
                 const cell = document.createElement("td");
-
-                if (i === 0 && j < firstDayOfMonth) {
-                    cell.textContent = "";
-                } else if (date > daysInMonth) {
+    
+                if ((i === 0 && j < firstDayOfMonth) || date > daysInMonth) {
                     cell.textContent = "";
                 } else {
                     cell.textContent = date;
-                    cell.addEventListener("click", () => {
-                        bookingForm.style.display = "flex";
-                        appointmentDate.value = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(date).padStart(2, "0")}`;
-                    });
-
+    
+                    // Esemény hozzáadása a dátum cellához
+                    cell.addEventListener("click", ((selectedDate) => {
+                        return () => {
+                            bookingForm.style.display = "flex";
+                            appointmentDate.value = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(selectedDate).padStart(2, "0")}`;
+                        };
+                    })(date)); // IIFE használata a dátum megőrzésére
+    
                     date++;
                 }
-
+    
                 row.appendChild(cell);
             }
-
+    
             calendarBody.appendChild(row);
         }
-    }
+    };
 
+    //lefoglalás elküldése, feljövő ablak//
     prevMonth.addEventListener("click", () => {
         currentDate.setMonth(currentDate.getMonth() - 1);
         renderCalendar();
@@ -61,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedDate = appointmentDate.value;
         const selectedTime = document.getElementById("appointment-time").value;
 
-        alert(`Appointment booked on ${selectedDate} at ${selectedTime}`);
+        alert(`Sikeres foglalás! ${selectedDate}  ${selectedTime}`);
         bookingForm.style.display = "none";
     });
 
