@@ -8,32 +8,36 @@ async function login() {
 
     console.log(email, psw);
 
-    const res =await fetch('http://localhost:3000/api/login',{
+    const res = await fetch('/api/login', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify({ email, psw}),
+        body: JSON.stringify({ email, psw }),
         credentials: 'include'
     });
 
     const data = await res.json();
-    console.log(data);
+    /*console.log(data);*/
 
 
-    
+
     if (res.ok) {
+        if (data.isAdmin === 1) {
+           alert(data.message)
+            window.location.href = '../admin.html';
+        }
         alert(data.message);
-        window.location.href = './home.html';/*vissza juttat a masik oldalra*/
+        window.location.href = '../home.html';/*vissza juttat a masik oldalra*/
     } else if (data.errors) {
-        let errorMessage= '';
-        for (let i =0; i < data.errors.length; i++){
+        let errorMessage = '';
+        for (let i = 0; i < data.errors.length; i++) {
             errorMessage += `${data.errors[i].error}\n`;
         }
         alert(errorMessage);
-    }else if (data.error) {
+    } else if (data.error) {
         alert(data.error);
-    }else {
+    } else {
         alert('Ismeretlen hiba');
     }
 }
