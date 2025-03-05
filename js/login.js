@@ -25,10 +25,10 @@ async function login() {
     if (res.ok) {
         if (data.isAdmin === 1) {
            alert(data.message)
-            window.location.href = '../admin.html';
+            window.location.href = './admin.html';
         }
         alert(data.message);
-        window.location.href = '../home.html';/*vissza juttat a masik oldalra*/
+        window.location.href = './home.html';/*vissza juttat a masik oldalra*/
     } else if (data.errors) {
         let errorMessage = '';
         for (let i = 0; i < data.errors.length; i++) {
