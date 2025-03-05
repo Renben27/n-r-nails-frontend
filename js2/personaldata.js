@@ -1,7 +1,37 @@
 const nailsLogo = document.getElementsByClassName('logo')[0];
+const logout = document.getElementsByClassName('logout')[0];
 nailsLogo.addEventListener('click', () => {
     window.location.href = ('./home.html');
 });
+logout.addEventListener('click', () => {
+    window.location.href = ('./index.html');
+});
+
+window.addEventListener('DOMContentLoaded', () => { loadData() });
+
+async function loadData() {
+    const res = await fetch('/api/getProfile', {
+        method: 'GET',
+        credentials: 'include'
+    })
+    if (!res.ok) {
+        console.error("Hiba az API hívásban");
+        return;
+    }
+    const data = await res.json();
+
+    renderCurrentData(data);
+}
+
+function renderCurrentData(data) {
+    // HTML elemek kiválasztása
+    document.getElementById('name').value = data.name || "";
+    document.getElementById('email').value = data.email || "";
+    document.getElementById('phone').value = data.phone || "";
+}
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementsByClassName('save-btn')[0];
     const passwordChangeLink = document.querySelector('.password-change');
@@ -51,3 +81,5 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = '/password-change'; // Átirányítás a jelszó módosítási oldalra
     });
 });
+
+//kijelentkezés
