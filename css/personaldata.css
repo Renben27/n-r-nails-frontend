@@ -1,17 +1,21 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('/images/hatter14.jpg'); /*Itt cseréld ki az elérési útra */
-    background-size: cover; /* A kép kitölti az egész hátteret */
-    background-position: center; /* A kép középre lesz igazítva */
-    background-repeat: no-repeat; /* Nem ismétlődik a kép */
-    color: #5a4632;
+    background-image: url('/images/hatter18.jfif');
+    /*Itt cseréld ki az elérési útra */
+    background-size: cover;
+    /* A kép kitölti az egész hátteret */
+    background-position: center;
+    /* A kép középre lesz igazítva */
+    background-repeat: no-repeat;
+    /* Nem ismétlődik a kép */
+    color: #886383;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
 .container {
     max-width: 900px;
     width: 100%;
@@ -22,7 +26,7 @@ body {
     position: relative;
 }
 
-.profile-icon i{
+.profile-icon i {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,12 +45,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
 }
-.change-password {
-    color: red;
-    margin-top: 25px;
-    text-decoration: none;
-    font-size: 20px;
-}
+
 .doboz {
     text-align: center;
     margin-bottom: 20px;
@@ -73,13 +72,13 @@ body {
 
 .menu a {
     text-decoration: none;
-    color: #5a4632;
+    color: #886383;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .menu a:hover {
-    color: #d2691e;
+    color: #ebc6eb;
 }
 
 .content {
@@ -101,12 +100,12 @@ body {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #ebc6eb;
     border-radius: 4px;
 }
 
 .save-btn {
-    background-color: #9f8b78;
+    background-color: #886383;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -115,7 +114,7 @@ body {
 }
 
 .save-btn:hover {
-    background-color: #4a3a29;
+    background-color: #886383;
 }
 
 .logout {
@@ -124,11 +123,36 @@ body {
 }
 
 .logout a {
-    color: #d2691e;
+    color: #fcb4fc;
     text-decoration: none;
     font-weight: bold;
 }
 
 .logout a:hover {
     text-decoration: underline;
+}
+
+.back-arrow {
+    position: fixed;
+    /* Rögzített pozíció az oldalon */
+    top: 20px;
+    /* Az oldal tetejétől 20px-re */
+    right: 20px;
+    /* Az oldal jobb szélétől 20px-re */
+    z-index: 100;
+    /* Biztosítja, hogy az elem mindig látszódjon */
+}
+
+.back-arrow i {
+    text-decoration: none;
+    background-color: #000000;
+    /* Nyíl hátterének színe */
+    color: rgb(216, 210, 198);
+    padding: 10px;
+    border-radius: 50%;
+    /* Kör alakú gomb */
+    display: inline-block;
+    font-size: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
 }
