@@ -3,8 +3,22 @@ const logout = document.getElementsByClassName('logout')[0];
 nailsLogo.addEventListener('click', () => {
     window.location.href = ('./home.html');
 });
-logout.addEventListener('click', () => {
-    window.location.href = ('./index.html');
+logout.addEventListener('click', async () => {
+    const res = await fetch('/api/logout', {
+        method: 'POST',
+        credentials: 'include'
+    })
+
+    console.log(res);
+    
+    const data = await res.json();
+    console.log(data);
+    
+    if (res.ok) {
+        window.location.href = ('./index.html');
+    } else {
+        alert("hiba a kijelentkezéskor");
+    }
 });
 
 window.addEventListener('DOMContentLoaded', () => { loadData() });
