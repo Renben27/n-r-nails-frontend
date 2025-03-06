@@ -1,7 +1,15 @@
 const nailsLogo = document.getElementsByClassName('logo')[0];
 const logout = document.getElementsByClassName('logout')[0];
+const myBooking = document.getElementById('myBooking');
+const myOpinion = document.getElementById('myOpinion');
 nailsLogo.addEventListener('click', () => {
     window.location.href = ('./home.html');
+});
+myBooking.addEventListener('click', () => {
+    window.location.href = ('./booking.html');
+});
+myOpinion.addEventListener('click', () => {
+    window.location.href = ('./opinion.html');
 });
 logout.addEventListener('click', async () => {
     const res = await fetch('/api/logout', {
