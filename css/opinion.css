@@ -25,17 +25,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
-
-.profile-icon i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 45px;
-    margin-top: 23px;
-    transition: ease 500ms;
-    color: black;
-}
-
 .logo {
     position: absolute;
     top: 20px;
@@ -54,47 +43,11 @@ body {
 .h1-box h1 {
     font-size: 24px;
     margin: 0;
-    color: #333;
+    color: #000000;
 }
 
 .profile {
     display: flex;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    cursor: pointer
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 500px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 12px 16px;
-    z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-#repair{
-    background-color: #886383;
-    color: #000000;
-    border-radius: 5px;
-}
-#repair:hover{
-    background-color: #584852;
-}
-#delete-btn{
-    background-color: #886383;
-    color: #000000;
-    border-radius: 5px;
-}
-#delete-btn:hover{
-    background-color: #584852;
 }
 .menu {
     display: flex;
@@ -121,19 +74,30 @@ body {
     padding: 20px;
 }
 
-.save-btn {
-    background-color: #886383;
-    color: white;
+textarea {
+    background-color: #fcb4fc;
+    color: #886383;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width:200px;
+    height: 50px;
 }
-
-.save-btn:hover {
+input{
+    background-color: #fcb4fc;
+    color: #886383;
+    width: 70px;
+    height: 30px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 40px;
+    right: 190px;
+}
+input:hover {
     background-color: #886383;
+    color: #000;
 }
-
 .logout {
     margin-top: 20px;
     text-align: center;
@@ -147,4 +111,28 @@ body {
 
 .logout a:hover {
     text-decoration: underline;
+    color: #886383;
+}
+form {
+    display: flex;
+    flex-direction: column; /* Az űrlap elemei egymás alatt maradnak */
+    gap: 10px; /* Távolság az elemek között */
+}
+
+.input-container {
+    display: flex;
+    align-items: flex-start; /* A label a textarea tetejéhez igazodik */
+    gap: 10px; /* Kis távolság a label és a textarea között */
+}
+
+label {
+    min-width: 120px; /* Fix szélesség, hogy ne törjön */
+    text-align: left;
+}
+input-container input{
+
+    display: flex;
+    flex-direction: column;
+    height: 300px; /* Példa magasság */
+    justify-content: flex-end; /* A gombot az aljára teszi */
 }

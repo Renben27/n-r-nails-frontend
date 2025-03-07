@@ -26,10 +26,8 @@ body {
     font-size: 3rem;
 }
 
-.focim {
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 500;
+.logo-img {
+    height: 300px;
 }
 
 
