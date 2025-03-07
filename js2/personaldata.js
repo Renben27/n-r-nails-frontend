@@ -101,5 +101,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // Jelszó módosítás link eseménye
 changePassword.addEventListener('click', () => {
-    window.location.href = '/password-change'; // Átirányítás a jelszó módosítási oldalra
+    window.location.href = '/passwordchange.html';
 });

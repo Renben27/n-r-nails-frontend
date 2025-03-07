@@ -48,25 +48,24 @@ body {
 
 .profile {
     display: flex;
-}
-.menu {
+}.menu {
     display: flex;
     flex-direction: column;
     width: 25%;
-    background-color: #f9f3ee;
+    background-color: #886383;
     padding: 20px;
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid #181818;
 }
 
 .menu a {
     text-decoration: none;
-    color: #886383;
+    color: #ebc6eb;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .menu a:hover {
-    color: #ebc6eb;
+    color: #000000;
 }
 
 .content {
@@ -75,7 +74,7 @@ body {
 }
 
 textarea {
-    background-color: #fcb4fc;
+    background-color: #ebc6eb;
     color: #886383;
     padding: 10px 15px;
     border: none;
@@ -85,8 +84,8 @@ textarea {
     height: 50px;
 }
 input{
-    background-color: #fcb4fc;
-    color: #886383;
+    background-color: #886383;
+    color: white;
     width: 70px;
     height: 30px;
     border-radius: 4px;
@@ -95,8 +94,8 @@ input{
     right: 190px;
 }
 input:hover {
-    background-color: #886383;
-    color: #000;
+    background-color: black;
+    
 }
 .logout {
     margin-top: 20px;
@@ -104,14 +103,14 @@ input:hover {
 }
 
 .logout a {
-    color: #fcb4fc;
+    color: #ebc6eb;
     text-decoration: none;
     font-weight: bold;
 }
 
 .logout a:hover {
     text-decoration: underline;
-    color: #886383;
+    color: black;
 }
 form {
     display: flex;

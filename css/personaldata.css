@@ -25,17 +25,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
-
-.profile-icon i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 45px;
-    margin-top: 23px;
-    transition: ease 500ms;
-    color: black;
-}
-
 .logo {
     position: absolute;
     top: 20px;
@@ -54,7 +43,7 @@ body {
 .h1-box h1 {
     font-size: 24px;
     margin: 0;
-    color: #333;
+    color: black;
 }
 
 .profile {
@@ -65,20 +54,20 @@ body {
     display: flex;
     flex-direction: column;
     width: 25%;
-    background-color: #f9f3ee;
+    background-color: #886383;
     padding: 20px;
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid #181818;
 }
 
 .menu a {
     text-decoration: none;
-    color: #886383;
+    color: #ebc6eb;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .menu a:hover {
-    color: #ebc6eb;
+    color: #000000;
 }
 
 .content {
@@ -114,7 +103,7 @@ body {
 }
 
 .save-btn:hover {
-    background-color: #886383;
+    background-color: black;
 }
 
 .logout {
@@ -123,36 +112,12 @@ body {
 }
 
 .logout a {
-    color: #fcb4fc;
+    color: #ebc6eb;
     text-decoration: none;
     font-weight: bold;
 }
 
 .logout a:hover {
     text-decoration: underline;
-}
-
-.back-arrow {
-    position: fixed;
-    /* Rögzített pozíció az oldalon */
-    top: 20px;
-    /* Az oldal tetejétől 20px-re */
-    right: 20px;
-    /* Az oldal jobb szélétől 20px-re */
-    z-index: 100;
-    /* Biztosítja, hogy az elem mindig látszódjon */
-}
-
-.back-arrow i {
-    text-decoration: none;
-    background-color: #000000;
-    /* Nyíl hátterének színe */
-    color: rgb(216, 210, 198);
-    padding: 10px;
-    border-radius: 50%;
-    /* Kör alakú gomb */
-    display: inline-block;
-    font-size: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-    transition: background-color 0.3s ease;
+    color: #000;
 }
