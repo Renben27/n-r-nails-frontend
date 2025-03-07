@@ -127,7 +127,7 @@ p {
 
 /* Gomb hover effekt */
 #pedikur-button:hover, #gellak-button:hover, #extram-button:hover, #mbuild-button:hover, #specials-button:hover , #weddingm-button:hover {
-    background-color: #584852;
+    background-color: #333030;
 }
 
 /*fejléc beállitasai*/
@@ -143,6 +143,7 @@ footer {
 footer p {
     margin: 0;
     color: black;
+    font-size: 20px;
 }
 
 .contact-section {
