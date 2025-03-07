@@ -37,15 +37,17 @@ async function loadData() {
         method: 'GET',
         credentials: 'include'
     })
-    console.log(res);
     if (!res.ok) {
         console.error("Hiba az API hívásban");
         return;
     }
+    
     const data = await res.json();
-    console.log(data);
+    console.log("Lekért profiladatok:", data); // Ellenőrzés
 
-    renderCurrentData(data);
+    if (data) {
+        renderCurrentData(data);
+    }
 }
 
 function renderCurrentData(data) {
@@ -55,11 +57,8 @@ function renderCurrentData(data) {
     document.getElementById('phone').value = data.telefon || "";
 }
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementsByClassName('save-btn')[0];
-    const passwordChangeLink = document.querySelector('.password-change');
 
     // Űrlap elküldése
     form.addEventListener('submit', async (event) => {
@@ -101,6 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 // Jelszó módosítás link eseménye
-passwordChangeLink.addEventListener('click', () => {
+changePassword.addEventListener('click', () => {
     window.location.href = '/password-change'; // Átirányítás a jelszó módosítási oldalra
 });
