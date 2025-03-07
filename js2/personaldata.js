@@ -2,6 +2,8 @@ const nailsLogo = document.getElementsByClassName('logo')[0];
 const logout = document.getElementsByClassName('logout')[0];
 const myBooking = document.getElementById('myBooking');
 const myOpinion = document.getElementById('myOpinion');
+const changePassword = document.getElementsByClassName('change-password')[0];
+
 nailsLogo.addEventListener('click', () => {
     window.location.href = ('./home.html');
 });
@@ -16,12 +18,11 @@ logout.addEventListener('click', async () => {
         method: 'POST',
         credentials: 'include'
     })
-
     console.log(res);
-    
+
     const data = await res.json();
     console.log(data);
-    
+
     if (res.ok) {
         window.location.href = ('./index.html');
     } else {
@@ -59,7 +60,7 @@ function renderCurrentData(data) {
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementsByClassName('save-btn')[0];
     const passwordChangeLink = document.querySelector('.password-change');
-   
+
     // Űrlap elküldése
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -98,10 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Hálózati hiba lépett fel.');
         }
     });
-
-    // Jelszó módosítás link eseménye
-    passwordChangeLink.addEventListener('click', (event) => {
-        event.preventDefault();
-        window.location.href = '/password-change'; // Átirányítás a jelszó módosítási oldalra
-    });
+});
+// Jelszó módosítás link eseménye
+passwordChangeLink.addEventListener('click', () => {
+    window.location.href = '/password-change'; // Átirányítás a jelszó módosítási oldalra
 });
