@@ -18,7 +18,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #FFE7DA;
+    background-image: url('/images/hatter18.jfif');
 }
 
 .tarolo {
@@ -29,13 +29,9 @@ body {
     font-size: 3rem;
 }
 
-.focim {
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 500;
-}
+
 .login, .reg {
-    background-color: #D3C2B5;
+    background-color: #e7b3e7;
     border-radius: 20px;
     padding: 15px;
     width: 500px;
@@ -47,7 +43,7 @@ body {
 }
 
 .reg {
-   background-color: #D3C2B5;
+   background-color: #e7b3e7;
    margin-top: 20px;
 }
 
@@ -71,4 +67,8 @@ body {
     .login, .reg {
         width: 350px;
     }
+}
+
+.logo-img {
+    height: 300px;
 }
