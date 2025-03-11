@@ -3,6 +3,7 @@ const logout = document.getElementsByClassName('logout')[0];
 const myBooking = document.getElementById('myBooking');
 const myOpinion = document.getElementById('myOpinion');
 const changePassword = document.getElementsByClassName('change-password')[0];
+const profilSettings = document.getElementById('profilSettings');
 
 nailsLogo.addEventListener('click', () => {
     window.location.href = ('./home.html');
@@ -41,7 +42,7 @@ async function loadData() {
         console.error("Hiba az API hívásban");
         return;
     }
-    
+
     const data = await res.json();
     console.log("Lekért profiladatok:", data); // Ellenőrzés
 
@@ -57,47 +58,44 @@ function renderCurrentData(data) {
     document.getElementById('phone').value = data.telefon || "";
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementsByClassName('save-btn')[0];
+profilSettings.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-    // Űrlap elküldése
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const email = document.getElementById('email').value;
 
-        if (name === null && phone === null && email === null) {
-            alert('Minden mezőt tölts ki');
-            return;
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+
+    if (name === null && phone === null && email === null) {
+        alert('Minden mezőt tölts ki');
+        return;
+    }
+
+    const profileData = {
+        name: name,
+        phone: phone,
+        email: email
+    };
+
+    try {
+        const response = await fetch('/api/profile', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(profileData)
+        });
+
+        if (response.ok) {
+            alert('A profiladatok sikeresen frissítve!');
+        } else {
+            alert('Hiba történt a profiladatok frissítése közben.');
         }
-
-        const profileData = {
-            name: name,
-            phone: phone,
-            email: email
-        };
-
-        try {
-            const response = await fetch('/api/profile', {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(profileData)
-            });
-
-            if (response.ok) {
-                alert('A profiladatok sikeresen frissítve!');
-            } else {
-                alert('Hiba történt a profiladatok frissítése közben.');
-            }
-        } catch (error) {
-            console.error('Hálózati hiba:', error);
-            alert('Hálózati hiba lépett fel.');
-        }
-    });
+    } catch (error) {
+        console.error('Hálózati hiba:', error);
+        alert('Hálózati hiba lépett fel.');
+    }
 });
 // Jelszó módosítás link eseménye
 changePassword.addEventListener('click', () => {
