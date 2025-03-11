@@ -31,7 +31,7 @@ logout.addEventListener('click', async () => {
     }
 });
 
-window.addEventListener('DOMContentLoaded', () => { loadData() });
+window.addEventListener('DOMContentLoaded', () => loadData);
 
 async function loadData() {
     const res = await fetch('/api/getProfile', {

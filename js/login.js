@@ -18,17 +18,18 @@ async function login() {
     });
 
     const data = await res.json();
-    /*console.log(data);*/
+    console.log(data);
 
 
 
     if (res.ok) {
         if (data.isAdmin === 1) {
-           alert(data.message)
+            alert(data.message)
             window.location.href = './admin.html';
+        } else {
+            alert(data.message);
+            window.location.href = './home.html';/*vissza juttat a masik oldalra*/
         }
-        alert(data.message);
-        window.location.href = './home.html';/*vissza juttat a masik oldalra*/
     } else if (data.errors) {
         let errorMessage = '';
         for (let i = 0; i < data.errors.length; i++) {
