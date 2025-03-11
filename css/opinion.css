@@ -25,6 +25,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
+
 .logo {
     position: absolute;
     top: 20px;
@@ -48,7 +49,9 @@ body {
 
 .profile {
     display: flex;
-}.menu {
+}
+
+.menu {
     display: flex;
     flex-direction: column;
     width: 25%;
@@ -73,6 +76,23 @@ body {
     padding: 20px;
 }
 
+.opinion {
+    position: relative;
+}
+
+.opinion input {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #886383;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border-radius: 4px;
+    position: absolute;
+    cursor: pointer;
+}
+
 textarea {
     background-color: #ebc6eb;
     color: #886383;
@@ -80,23 +100,17 @@ textarea {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width:200px;
+    min-width: 150px;
+    max-width: 400px;
+    width: 200px;
     height: 50px;
 }
-input{
-    background-color: #886383;
-    color: white;
-    width: 70px;
-    height: 30px;
-    border-radius: 4px;
-    position: absolute;
-    bottom: 40px;
-    right: 190px;
-}
+
 input:hover {
     background-color: black;
-    
+
 }
+
 .logout {
     margin-top: 20px;
     text-align: center;
@@ -112,26 +126,35 @@ input:hover {
     text-decoration: underline;
     color: black;
 }
+
 form {
     display: flex;
-    flex-direction: column; /* Az űrlap elemei egymás alatt maradnak */
-    gap: 10px; /* Távolság az elemek között */
+    flex-direction: column;
+    /* Az űrlap elemei egymás alatt maradnak */
+    gap: 10px;
+    /* Távolság az elemek között */
 }
 
 .input-container {
     display: flex;
-    align-items: flex-start; /* A label a textarea tetejéhez igazodik */
-    gap: 10px; /* Kis távolság a label és a textarea között */
+    align-items: flex-start;
+    /* A label a textarea tetejéhez igazodik */
+    gap: 10px;
+    /* Kis távolság a label és a textarea között */
 }
 
 label {
-    min-width: 120px; /* Fix szélesség, hogy ne törjön */
+    min-width: 120px;
+    /* Fix szélesség, hogy ne törjön */
     text-align: left;
 }
-input-container input{
+
+input-container input {
 
     display: flex;
     flex-direction: column;
-    height: 300px; /* Példa magasság */
-    justify-content: flex-end; /* A gombot az aljára teszi */
+    height: 300px;
+    /* Példa magasság */
+    justify-content: flex-end;
+    /* A gombot az aljára teszi */
 }
