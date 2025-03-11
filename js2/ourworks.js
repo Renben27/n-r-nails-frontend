@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 const imgElement = document.createElement("img");
                 imgElement.src = `/uploads/${image.kep}`;
                 imgElement.alt = "Gallery Image";
+                imgElement.loading = "lazy";
                 imgElement.addEventListener("click", function () {
                     modal.style.display = "flex";
                     modalImg.src = this.src;
