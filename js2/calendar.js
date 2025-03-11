@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const calendarBody = document.getElementById("calendar-body");
     const monthYear = document.getElementById("month-year");
@@ -8,8 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bookingForm = document.querySelector(".booking-form");
 
     let currentDate = new Date();
-
-
+    
 //naptár megjelenítése, napok kiválasztása//
     function renderCalendar() {
         const currentYear = currentDate.getFullYear();
@@ -65,7 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const selectedDate = appointmentDate.value;
         const selectedTime = document.getElementById("appointment-time").value;
-
+      if (res.ok) {
+        
+      }
         alert(`Sikeres foglalás! ${selectedDate}  ${selectedTime}`);
         bookingForm.style.display = "none";
     });
