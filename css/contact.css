@@ -168,3 +168,16 @@ footer {
 .footer a:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 570px) {
+    .container{
+        max-width: 300px;
+        font-size: smaller;
+    }
+    .info{
+        font-size: smaller;
+    }
+    .form{
+        font-size: smaller;
+    }
+}
