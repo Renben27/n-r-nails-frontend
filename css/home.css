@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -298,7 +297,8 @@ strong {
 
 .reviews-container {
     width: 80%;
-    overflow: hidden; /* Rejti a görgetősávot, de még mindig vízszintesen mozog */
+    overflow: hidden;
+    /* Rejti a görgetősávot, de még mindig vízszintesen mozog */
     white-space: nowrap;
     scroll-behavior: smooth;
     justify-content: center;
@@ -307,9 +307,11 @@ strong {
 }
 
 .reviews-wrapper {
-    display: flex; /* inline-flex helyett flex, hogy megfelelően illeszkedjen */
+    display: flex;
+    /* inline-flex helyett flex, hogy megfelelően illeszkedjen */
     gap: 10px;
-    transition: transform 10s ease-in-out; /* Finom mozgás */
+    transition: transform 10s ease-in-out;
+    /* Finom mozgás */
 }
 
 .review-box {
@@ -324,8 +326,9 @@ strong {
     overflow-wrap: break-word;
     white-space: normal;
 }
-#nextBtn{
-    background-color: #c99ec2 ;
+
+#nextBtn {
+    background-color: #c99ec2;
     font-size: 20px;
     border-radius: 5px;
     align-items: center;
@@ -334,24 +337,28 @@ strong {
     margin: 2px;
     z-index: 1000;
 }
-#prevBtn{
-    background-color: #c99ec2 ;
+
+#prevBtn {
+    background-color: #c99ec2;
     font-size: 20px;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
     float: left;
     margin: 2px;
-    z-index: 1000 !important ;
+    z-index: 1000 !important;
 }
-@media screen and (min-width: 1000px){
-    #nextBtn{
+
+@media screen and (min-width: 1500px) {
+    #nextBtn {
         margin-right: 150px;
     }
-    #prevBtn{
+
+    #prevBtn {
         margin-left: 150px;
     }
 }
+
 /* Ensure nav is hidden by default on mobile */
 @media screen and (max-width: 768px) {
 
@@ -425,7 +432,8 @@ strong {
         flex-direction: column;
         align-items: center;
     }
-    body{
+
+    body {
         font-size: smaller;
     }
 }
