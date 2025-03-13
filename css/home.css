@@ -400,7 +400,7 @@ strong {
         width: 100vw;
         height: calc(100vh - 100%);
         padding: 10px 0;
-        gap: 10px !important;
+        gap: 0px !important;
     }
 
     header {
@@ -420,7 +420,7 @@ strong {
     nav a {
         flex-direction: column;
         margin: 10px 0;
-        font-size: 18px;
+        font-size: 15px;
         width: auto !important;
     }
 
