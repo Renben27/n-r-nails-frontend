@@ -164,7 +164,10 @@ header {
     height: auto;
     border-radius: 15px;
 }
-
+#modalImage{
+    max-width: 400px;
+    min-height: 600px;
+}
 .close {
     position: absolute;
     top: 10px;
