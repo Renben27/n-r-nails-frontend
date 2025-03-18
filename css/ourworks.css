@@ -243,8 +243,7 @@ footer p {
     .logo img {
         font-size: 45px;
     }
-
-    .modal-content {
+    .modal-content img{
         max-width: 270px;
         min-height: 300px;
         border-radius: 15px;
