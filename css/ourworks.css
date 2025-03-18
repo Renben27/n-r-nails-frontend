@@ -160,13 +160,9 @@ header {
 }
 
 .modal-content img {
-    width: 100%;
-    /*height: auto;*/
-    border-radius: 15px;
-}
-#modalImage{
     max-width: 400px;
     min-height: 600px;
+    border-radius: 15px;
 }
 .close {
     position: absolute;
