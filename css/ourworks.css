@@ -122,8 +122,6 @@ header {
     height: 600px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: scale(1);
-    transition: transform 0.3s ease;
 }
 
 
@@ -225,4 +223,19 @@ footer p {
     font-family: "Kalam", serif;
     font-weight: 400;
     font-style: normal;
+}
+@media screen and (max-width: 768px){
+    body{
+       font-size: 0.9rem;
+    }
+    .contact-section{
+        font-size: 0.9rem;
+    }
+    .profile-icon {
+        font-size: 45px;
+    }
+    .logo img{
+        font-size: 45px;
+    }
+    
 }
