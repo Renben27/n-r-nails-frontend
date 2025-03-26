@@ -100,7 +100,8 @@ header {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.8); /* Fekete háttér */
+    background: rgba(0, 0, 0, 0.8);
+    /* Fekete háttér */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,8 +123,6 @@ header {
     height: 600px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: scale(1);
-    transition: transform 0.3s ease;
 }
 
 
@@ -160,8 +159,8 @@ header {
 }
 
 .modal-content img {
-    width: 100%;
-    height: auto;
+    max-width: 400px;
+    min-height: 600px;
     border-radius: 15px;
 }
 
@@ -226,4 +225,29 @@ footer p {
     font-family: "Kalam", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .contact-section {
+        font-size: 0.9rem;
+    }
+
+    .profile-icon {
+        font-size: 45px;
+    }
+
+    .logo img {
+        font-size: 45px;
+    }
+    .modal-content img{
+        max-width: 270px;
+        min-height: 300px;
+        border-radius: 15px;
+        align-items: center;
+        justify-content: center;
+    }
 }

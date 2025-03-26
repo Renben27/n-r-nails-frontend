@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -43,6 +42,7 @@ body {
     /* Logo mérete */
     height: auto;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 header {
@@ -78,6 +78,7 @@ header {
     font-size: 45px;
     /* Ikon mérete */
     margin-top: 23px;
+    cursor: pointer;
 }
 
 header nav {
@@ -294,6 +295,69 @@ strong {
 }
 
 
+.reviews-container {
+    width: 80%;
+    overflow: hidden;
+    /* Rejti a görgetősávot, de még mindig vízszintesen mozog */
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.reviews-wrapper {
+    display: flex;
+    /* inline-flex helyett flex, hogy megfelelően illeszkedjen */
+    gap: 10px;
+    transition: transform 10s ease-in-out;
+    /* Finom mozgás */
+}
+
+.review-box {
+    min-width: 250px;
+    max-width: 450px;
+    min-height: 150px;
+    max-height: 200px;
+    padding: 15px;
+    background: #c99ec2;
+    border-radius: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+#nextBtn {
+    background-color: #c99ec2;
+    font-size: 20px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin: 2px;
+    z-index: 1000;
+}
+
+#prevBtn {
+    background-color: #c99ec2;
+    font-size: 20px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin: 2px;
+    z-index: 1000 !important;
+}
+
+@media screen and (min-width: 1500px) {
+    #nextBtn {
+        margin-right: 150px;
+    }
+
+    #prevBtn {
+        margin-left: 150px;
+    }
+}
 
 /* Ensure nav is hidden by default on mobile */
 @media screen and (max-width: 768px) {
@@ -336,7 +400,7 @@ strong {
         width: 100vw;
         height: calc(100vh - 100%);
         padding: 10px 0;
-        gap: 10px !important;
+        gap: 0px !important;
     }
 
     header {
@@ -356,7 +420,7 @@ strong {
     nav a {
         flex-direction: column;
         margin: 10px 0;
-        font-size: 18px;
+        font-size: 15px;
         width: auto !important;
     }
 
@@ -368,7 +432,8 @@ strong {
         flex-direction: column;
         align-items: center;
     }
-    body{
+
+    body {
         font-size: smaller;
     }
 }

@@ -1,6 +1,13 @@
 import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/+esm';
 
-
+const nailsLogo = document.getElementsByClassName('logo')[0];
+nailsLogo.addEventListener('click', () => {
+    window.location.href = ('./home.html');
+});
+const btnBack = document.getElementsByClassName('PswBack')[0];
+btnBack.addEventListener('click', () => {
+    window.location.href = ('./personaldata.html');
+});
 const btnSave = document.getElementsByClassName('PswSave')[0];
 btnSave.addEventListener('click', editProfilePsw);
 
@@ -43,3 +50,21 @@ async function editProfilePsw() {
         });
     };
 };
+
+async function logout() {
+    const res = await fetch('/api/logout', {
+        method: 'POST',
+        credentials: 'include'
+    })
+
+    console.log(res);
+
+    const data = await res.json();
+    console.log(data);
+
+    if (res.ok) {
+        window.location.href = ('./index.html');
+    } else {
+        alert("hiba a kijelentkezéskor");
+    }
+}

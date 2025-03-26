@@ -52,7 +52,7 @@ header {
 .profile-icon {
     width: 80px; /* A kör átmérője */
     height: 80px;
-    background-color: #ebc6eb; /* Háttérszín */
+    background-color: #886383; /* Háttérszín */
     border-radius: 50%; /* Kör alak */
     display: flex;
     align-items: center;
@@ -167,4 +167,17 @@ footer {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 570px) {
+    .container{
+        max-width: 300px;
+        font-size: smaller;
+    }
+    .info{
+        font-size: smaller;
+    }
+    .form{
+        font-size: smaller;
+    }
 }

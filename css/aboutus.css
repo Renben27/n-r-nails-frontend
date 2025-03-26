@@ -41,6 +41,7 @@ header {
     font-size: 45px;
     margin-top: 23px;
     transition: ease 500ms;
+    cursor: pointer;
 }
 
 .dancing-script {
@@ -145,8 +146,6 @@ h1 {
     font-size: 25px;
 }
 
-
-
 .content h2 {
     font-size: 34px;
     margin-top: 20px;
@@ -178,7 +177,7 @@ footer {
     text-align: center;
     padding: 10px 20px;
     background-color: #886383;
-   
+
 }
 
 .contact-section {
@@ -237,27 +236,68 @@ footer {
     color: #000000;
 }
 
-.reviews {
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-    max-width: 800px;
-    background: #f8e8f8;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+
+.reviews-container {
+    width: 80%;
+    overflow: hidden;
+    /* Rejti a görgetősávot, de még mindig vízszintesen mozog */
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
-.reviews h2 {
-    font-size: 35px;
-    color: #886383;
-    margin-bottom: 20px;
+.reviews-wrapper {
+    display: flex;
+    /* inline-flex helyett flex, hogy megfelelően illeszkedjen */
+    gap: 10px;
+    transition: transform 10s ease-in-out;
+    /* Finom mozgás */
 }
 
-.review {
-    background: white;
+.review-box {
+    min-width: 250px;
+    max-width: 450px;
+    min-height: 150px;
+    max-height: 200px;
     padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background: #c99ec2;
+    border-radius: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+#nextBtn {
+    background-color: #c99ec2;
     font-size: 20px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin: 2px;
+    z-index: 1000;
+}
+
+#prevBtn {
+    background-color: #c99ec2;
+    font-size: 20px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin: 2px;
+    z-index: 1000 !important;
+}
+
+@media screen and (min-width: 1500px) {
+    #nextBtn {
+        margin-right: 150px;
+    }
+
+    #prevBtn {
+        margin-left: 150px;
+    }
 }
