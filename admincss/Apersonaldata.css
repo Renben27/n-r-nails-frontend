@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/images/hatter18.jfif');
+    /*Itt cseréld ki az elérési útra */
+    background-size: cover;
+    /* A kép kitölti az egész hátteret */
+    background-position: center;
+    /* A kép középre lesz igazítva */
+    background-repeat: no-repeat;
+    /* Nem ismétlődik a kép */
+    color: #886383;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.h1-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.h1-box h1 {
+    font-size: 24px;
+    margin: 0;
+    color: black;
+}
+
+.profile {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: #886383;
+    padding: 20px;
+    border-right: 1px solid #181818;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ebc6eb;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #000000;
+}
+
+.content {
+    width: 75%;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ebc6eb;
+    border-radius: 4px;
+}
+
+.save-btn {
+    background-color: #886383;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background-color: black;
+}
+
+.logout {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logout a {
+    color: #ebc6eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+@media screen {
+    .container{
+        font-size: 4vw;
+        font-size: small;
+        margin: 15px;
+        margin-top: 100px;
+    }
+    input::placeholder{
+        font-size: 15px;
+    }
+    .save-btn{
+        margin-top: 10px;
+    }
+}

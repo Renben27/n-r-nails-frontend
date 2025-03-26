@@ -1,0 +1,440 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ebc6eb;
+    font-size: 20px;
+}
+
+.jim-nightshade-regular {
+    font-family: "Jim Nightshade", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    color: black;
+    position: relative;
+    top: -60px;
+    /* Felfelé mozgatja a szöveget */
+    margin-bottom: 20px;
+    /* Csökkenti a szöveg alatti távolságot */
+}
+
+.just-another-hand-regular {
+    font-family: "Just Another Hand", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kalam-regular {
+    font-family: "Kalam", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo-img {
+    position: absolute;
+    top: 50%;
+    /* Függőlegesen középre */
+    left: 50%;
+    /* Vízszintesen középre */
+    transform: translate(-50%, -50%);
+    /* Pontos középre igazítás */
+    width: 100px;
+    /* Logo mérete */
+    height: auto;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+header {
+    background-color: #886383;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    /* Középre helyezi a tartalmat */
+    align-items: center;
+    flex-direction: column;
+    /* A logo és a navigáció alá-fölé kerül */
+    border-bottom: 2px solid #000;
+    /* 2px vastagságú fekete vonal */
+    padding-bottom: 10px;
+    /* Térköz a vonal és a szöveg között */
+    overflow: visible;
+    /* Fontos, hogy a lekerekítés működjön */
+    position: sticky;
+    width: 100%;
+    padding: 0px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: none;
+}
+
+.profile-icon {
+    position: absolute;
+    top: 20px;
+    /* Felső távolság */
+    right: 20px;
+    /* Jobb oldali távolság */
+    font-size: 45px;
+    /* Ikon mérete */
+    margin-top: 23px;
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    /* Egyenlő távolság a menüpontok között */
+    gap: 50px;
+    /* Távolság a menüpontok között */
+    width: 70%;
+    /* A navigáció szélessége */
+    margin: 0;
+    /* Nincs extra távolság a fejléc és a navigáció között */
+    position: relative;
+    /* Fontos, hogy a vonal helyzete ehhez igazodjon */
+    padding: 5px;
+    /* Nincs belső távolság */
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 63px;
+    width: 15%;
+    text-align: center;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.header-line {
+    width: 90%;
+    /* A vonal szélessége a navigációhoz igazítva */
+    max-width: 10000px;
+    /* Maximális szélesség (ha a képernyőn nagyobb lenne a 70%) */
+    border-bottom: 2px solid black;
+    /* Vonal vastagsága és színe */
+    margin: 0 auto;
+    /* Középre igazítja a vonalat, és távolságot ad a menüpontoktól */
+}
+
+* {
+    border: none;
+    /* Globális szintű border-eltávolítás, ha más elem is okozza */
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: #886383;
+    padding: 100px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/szalon4.jpg');
+    /* Háttérkép helye */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    /* A kép 50%-os átlátszósága */
+    z-index: 1;
+    /* A háttér legyen alatta */
+}
+
+.hero h1,
+.hero span,
+.hero p {
+    position: relative;
+    z-index: 2;
+    /* A szöveg legyen a háttér felett */
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: 80px;
+    margin-top: -30px;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+}
+
+.features div {
+    max-width: 330px;
+}
+
+footer {
+    background-color: #886383;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-top: none;
+    /* Ha a lábléc okoz egy felső vonalat */
+}
+
+footer p {
+    margin: 0;
+    color: black;
+}
+
+strong {
+    font-size: 100px;
+    color: #c7a1bf;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item img {
+    width: 24px;
+    /* Ikon mérete */
+    height: 24px;
+}
+
+.contact-item span {
+    font-size: 16px;
+    color: #000;
+    /* Szöveg színe */
+}
+
+.contact-section span {
+    font-weight: 500;
+}
+
+.fixed {
+    position: fixed;
+    right: 1%;
+    top: 75%;
+    z-index: 1000;
+    background-color: #886383;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: ease 500ms;
+}
+
+.fixed:hover {
+    transform: scale(1.1);
+}
+
+.fixed i {
+    font-size: 2rem;
+    color: #000000;
+}
+
+/* hamburger menü */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 35px;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+.reviews-container {
+    width: 80%;
+    overflow: hidden;
+    /* Rejti a görgetősávot, de még mindig vízszintesen mozog */
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.reviews-wrapper {
+    display: flex;
+    /* inline-flex helyett flex, hogy megfelelően illeszkedjen */
+    gap: 10px;
+    transition: transform 10s ease-in-out;
+    /* Finom mozgás */
+}
+
+.review-box {
+    min-width: 250px;
+    max-width: 450px;
+    min-height: 150px;
+    max-height: 200px;
+    padding: 15px;
+    background: #c99ec2;
+    border-radius: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+#nextBtn {
+    background-color: #c99ec2;
+    font-size: 20px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin: 2px;
+    z-index: 1000;
+}
+
+#prevBtn {
+    background-color: #c99ec2;
+    font-size: 20px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin: 2px;
+    z-index: 1000 !important;
+}
+
+@media screen and (min-width: 1500px) {
+    #nextBtn {
+        margin-right: 150px;
+    }
+
+    #prevBtn {
+        margin-left: 150px;
+    }
+}
+
+/* Ensure nav is hidden by default on mobile */
+@media screen and (max-width: 768px) {
+
+    .profile-icon {
+        top: 0px;
+        /* Felső távolság */
+        right: 20px;
+        /* Jobb oldali távolság */
+        font-size: 45px;
+        /* Ikon mérete */
+        margin-top: 23px;
+    }
+
+    .header-line {
+        position: absolute;
+        bottom: 0px;
+        width: 90%;
+        /* A vonal szélessége a navigációhoz igazítva */
+        max-width: 10000px;
+        /* Maximális szélesség (ha a képernyőn nagyobb lenne a 70%) */
+        border-bottom: 2px solid black;
+        /* Vonal vastagsága és színe */
+        margin: 0 auto;
+        /* Középre igazítja a vonalat, és távolságot ad a menüpontoktól */
+    }
+
+    nav {
+        display: none !important;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center !important;
+        align-items: center;
+        background-color: #c7a1bf;
+        /* Match the header background color */
+        position: absolute;
+        top: 100%;
+        /* Position below the header */
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 100%);
+        padding: 10px 0;
+        gap: 0px !important;
+    }
+
+    header {
+        min-height: 100px;
+    }
+
+    .menu-toggle:checked~nav {
+        display: flex !important;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        background-color: transparent;
+        /* Remove white background */
+    }
+
+    nav a {
+        flex-direction: column;
+        margin: 10px 0;
+        font-size: 15px;
+        width: auto !important;
+        gap: 5px;
+    }
+
+    nav img {
+        display: none;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body {
+        font-size: smaller;
+    }
+}
