@@ -8,7 +8,7 @@ const btnBack = document.getElementsByClassName('PswBack')[0];
 btnBack.addEventListener('click', () => {
     window.location.href = ('./personaldata.html');
 });
-const btnSave = document.getElementsByClassName('PswSave')[0];
+const btnSave = document.getElementsByClassName('PswSave')[0]; 
 btnSave.addEventListener('click', editProfilePsw);
 
 async function editProfilePsw() {
