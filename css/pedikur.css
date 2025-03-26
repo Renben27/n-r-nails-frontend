@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9e9e3;
+    font-size: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #D3C2B5;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: sticky;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+
+#arrow-left, .profile-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D3C2B5;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.profile-icon {
+    background-color: inherit;
+    color: black;
+    border: none;
+    font-size: 45px;
+}
+.logo img {
+    width: 110px;
+    height: 110px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #d3bfb4;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-top: none;
+    /* Ha a lábléc okoz egy felső vonalat */
+}
+
+footer p {
+    margin: 0;
+    color: black;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item img {
+    width: 24px;
+    /* Ikon mérete */
+    height: 24px;
+}
+
+.contact-item span {
+    font-size: 16px;
+    color: #000;
+    /* Szöveg színe */
+}
+
+.contact-section span {
+    font-weight: 500;
+}
+
+.kalam-regular {
+    font-family: "Kalam", serif;
+    font-weight: 400;
+    font-style: normal;
+}
