@@ -43,3 +43,21 @@ async function editProfilePsw() {
         });
     };
 };
+
+async function logout() {
+    const res = await fetch('/api/logout', {
+        method: 'POST',
+        credentials: 'include'
+    })
+
+    console.log(res);
+    
+    const data = await res.json();
+    console.log(data);
+    
+    if (res.ok) {
+        window.location.href = ('./index.html');
+    } else {
+        alert("hiba a kijelentkezéskor");
+    }
+}
