@@ -1,21 +1,17 @@
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('/images/hatter18.jfif');
-    /*Itt cseréld ki az elérési útra */
-    background-size: cover;
-    /* A kép kitölti az egész hátteret */
-    background-position: center;
-    /* A kép középre lesz igazítva */
-    background-repeat: no-repeat;
-    /* Nem ismétlődik a kép */
+    background-image: url('/images/hatter18.jfif'); /*Itt cseréld ki az elérési útra */
+    background-size: cover; /* A kép kitölti az egész hátteret */
+    background-position: center; /* A kép középre lesz igazítva */
+    background-repeat: no-repeat; /* Nem ismétlődik a kép */
     color: #886383;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
-
 .container {
     max-width: 900px;
     width: 100%;
@@ -25,6 +21,17 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
+
+.profile-icon i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    margin-top: 23px;
+    transition: ease 500ms;
+    color: black;
+}
+
 .logo {
     position: absolute;
     top: 20px;
@@ -35,15 +42,15 @@ body {
     object-fit: cover;
 }
 
-.h1-box {
+.doboz {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.h1-box h1 {
+.doboz h1 {
     font-size: 24px;
     margin: 0;
-    color: black;
+    color: #333;
 }
 
 .profile {
@@ -54,20 +61,20 @@ body {
     display: flex;
     flex-direction: column;
     width: 25%;
-    background-color: #886383;
+    background-color: #f9f3ee;
     padding: 20px;
-    border-right: 1px solid #181818;
+    border-right: 1px solid #e0e0e0;
 }
 
 .menu a {
     text-decoration: none;
-    color: #ebc6eb;
+    color: #886383;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .menu a:hover {
-    color: #000000;
+    color: #ebc6eb;
 }
 
 .content {
@@ -103,7 +110,7 @@ body {
 }
 
 .save-btn:hover {
-    background-color: black;
+    background-color: #886383;
 }
 
 .logout {
@@ -112,27 +119,33 @@ body {
 }
 
 .logout a {
-    color: #ebc6eb;
+    color: #fcb4fc;
     text-decoration: none;
     font-weight: bold;
 }
 
 .logout a:hover {
     text-decoration: underline;
-    color: #000;
 }
 
-@media screen {
-    .container{
-        font-size: 4vw;
-        font-size: small;
-        margin: 15px;
-        margin-top: 100px;
-    }
-    input::placeholder{
-        font-size: 15px;
-    }
-    .save-btn{
-        margin-top: 10px;
-    }
+.back-arrow {
+    position: fixed; /* Rögzített pozíció az oldalon */
+    top: 20px; /* Az oldal tetejétől 20px-re */
+    right: 20px; /* Az oldal jobb szélétől 20px-re */
+    z-index: 100; /* Biztosítja, hogy az elem mindig látszódjon */
 }
+
+.back-arrow i {
+    text-decoration: none;
+    background-color: #000000; /* Nyíl hátterének színe */
+    color: rgb(216, 210, 198);
+    padding: 10px;
+    border-radius: 50%; /* Kör alakú gomb */
+    display: inline-block;
+    font-size: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+
+
