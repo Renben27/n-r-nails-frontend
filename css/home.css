@@ -322,7 +322,6 @@ strong {
     padding: 15px;
     background: #c99ec2;
     border-radius: 10px;
-    word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
 }
