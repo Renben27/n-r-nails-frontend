@@ -169,13 +169,27 @@ footer {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 600px) {
     .container{
         max-width: 300px;
+        font-size: small;
+    }
+    .info p{
+        font-size: small;
+        overflow-wrap: break-word;
+    }
+    .form{
+        font-size: small;
+    }
+}
+@media screen and (max-width: 400px) {
+    .container{
+        max-width: 270px;
         font-size: smaller;
     }
-    .info{
+    .info p{
         font-size: smaller;
+        overflow-wrap: break-word;
     }
     .form{
         font-size: smaller;
