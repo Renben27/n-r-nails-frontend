@@ -6,6 +6,7 @@ body {
     text-align: center;
 
 }
+
 .header {
     background-color: #886383;
     padding: 20px;
@@ -14,32 +15,37 @@ body {
     align-items: center;
     gap: 50px;
 }
+
 .logo {
     width: 80px;
     height: 80px;
     border-radius: 50%;
 }
+
 .icons {
     display: flex;
     gap: 15px;
     margin-right: 20px;
 }
+
 .icons img {
     width: 30px;
     height: 30px;
 }
+
 .container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 50px;
     margin-top: 30px;
-    
+
 }
+
 .card {
     display: flex;
     /* Flexbox a kép és tartalom igazításához */
-   
+
     background-color: #ffffff;
     /* Háttérszín */
     border-radius: 20px;
@@ -48,11 +54,12 @@ body {
     /* Árnyék */
     overflow: hidden;
     /* A kerekített szélek miatt ne lógjon ki a kép */
-    width: 700px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     margin: auto;
     margin-bottom: 30px;
 }
+
 .card img {
     width: 50%;
     height: auto;
@@ -60,11 +67,13 @@ body {
     object-fit: cover;
     /* Kép kitöltése */
 }
+
 /* Kártya tartalmának beállítása */
 .card-content {
     padding: 20px;
     display: flex;
-    flex-direction: column;    /* Tartalom függőleges elrendezése */
+    flex-direction: column;
+    /* Tartalom függőleges elrendezése */
     justify-content: center;
     text-align: left;
     /* Balra igazítás */
@@ -76,6 +85,20 @@ body {
     margin-bottom: 10px;
     font-weight: bold;
 }
+
+.card-content form label {
+    display: flex; /* Flexbox használata a címkékhez */
+    align-items: center; /* Középre igazítja a szöveget és a rádiógombot */
+    
+    width: 100%; /* Ne törjön meg furcsán */
+    margin-bottom: 5px; /* Kis térköz az egyes opciók között */
+}
+
+input[type="radio"] {
+    margin: 0;
+    flex-shrink: 0; /* Megakadályozza az összenyomódást */
+}
+
 
 /* Szöveg stílus */
 p {
@@ -163,7 +186,8 @@ footer p {
     border-collapse: collapse;
 }
 
-.calendar th, .calendar td {
+.calendar th,
+.calendar td {
     width: 60px;
     height: 60px;
     text-align: center;
@@ -225,8 +249,11 @@ footer p {
     flex-direction: column;
 }
 
-.booking-form form label, .booking-form form input, .booking-form form button {
+.booking-form form label,
+.booking-form form input,
+.booking-form form button {
     margin-bottom: 10px;
+    float: left;
 }
 
 .container-card {
@@ -252,11 +279,14 @@ footer p {
 }
 
 .header-icons {
-    position: absolute; /* Az ikonok a jobb felső sarokban lesznek */
+    position: absolute;
+    /* Az ikonok a jobb felső sarokban lesznek */
     top: 20px;
     right: 20px;
-    align-items: center; /* Függőleges középre igazítás */
-    gap: 20px;  /* Távolság az ikonok között */
+    align-items: center;
+    /* Függőleges középre igazítás */
+    gap: 20px;
+    /* Távolság az ikonok között */
     flex-direction: row;
     grid-template-columns: repeat(2, 1fr);
     display: grid;
@@ -264,7 +294,8 @@ footer p {
 }
 
 /* Az ikonok egységes mérete és stílusa */
-.back-arrow, .profile-icon {
+.back-arrow,
+.profile-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,7 +305,8 @@ footer p {
     border-radius: 50%;
 }
 
-.back-arrow i, .profile-icon i {
+.back-arrow i,
+.profile-icon i {
     color: #ebc6eb;
     font-size: 24px;
 }
@@ -291,15 +323,18 @@ form label {
     cursor: pointer;
 }
 
-form input[type="checkbox"] {
+form input[type="radio"] {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    accent-color: #886383; /* Szín beállítása */
+    accent-color: #886383;
+    /* Szín beállítása */
 }
 
 /* Formázott inputok és gomb */
-input, select, button {
+input,
+select,
+button {
     width: 100px;
     padding: 10px;
     margin: 10px 0;
@@ -309,7 +344,8 @@ input, select, button {
     transition: 0.3s;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
     outline: none;
     border-color: #6b3e6b;
     box-shadow: 0 0 8px rgba(160, 111, 160, 0.7);
@@ -332,7 +368,8 @@ label {
     margin-top: 10px;
 }
 
-#next-month, #prev-month {
+#next-month,
+#prev-month {
     width: 50px;
 }
 
@@ -344,4 +381,134 @@ label {
     font-family: "Kalam", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+@media (max-width: 1400px) {
+    .container-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .card {
+        width: 70%;
+        /* Kisebb szélesség */
+        height: auto;
+        /* Automatikus magasság */
+        padding: 15px;
+    }
+
+    .card img {
+        width: 50%;
+        /* Teljes szélesség */
+        height: auto;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        /* Kisebb cím */
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    form label {
+        font-size: 16px;
+        /* Kisebb betűméret */
+        text-align: left;
+    }
+
+    .calendar-container,
+    .booking-form {
+        width: 80%;
+    }
+
+    .calendar th,
+    .calendar td {
+        font-size: 14px;
+        /* Kisebb szöveg */
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container-card {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .card {
+        width: 70%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .card-image {
+        object-fit: cover;
+    }
+
+    .card-content {
+        font-size: 12px;
+        /* Még kisebb szöveg 900px alatt */
+        width: 50px;
+        height: auto;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+       
+
+    }
+
+    .card-title {
+        text-align: center;
+        justify-content: center;
+        font-size: 1rem;
+        overflow-wrap: normal;
+    }
+
+    form label {
+        font-size: 14px;
+        /* Kisebb betűméret 900px alatt */
+        text-align: left;
+    }
+
+    .calendar-container,
+    .booking-form {
+        width: 90%;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+        font-size: 20px;
+        /* Csökkentett betűméret */
+    }
+
+    .contact-item {
+        gap: 5px;
+    }
+
+
+
+    .calendar th,
+    .calendar td {
+        font-size: 12px;
+        /* Még kisebb szöveg 900px alatt */
+        width: 40px;
+        height: 40px;
+    }
+
+    .calendar-header {
+        font-size: 16px;
+    }
+
+
+}
+
+@media (max-width: 620px) {
+    .card-content {
+        font-size: smaller;
+
+    }
 }
