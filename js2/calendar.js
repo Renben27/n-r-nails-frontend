@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderCalendar();
 });
-
+/*
 Swal.fire({
     title: "Custom width, padding, color, background.",
     width: 600,
@@ -87,4 +87,4 @@ Swal.fire({
       left top
       no-repeat
     `
-  });
+  });*/
