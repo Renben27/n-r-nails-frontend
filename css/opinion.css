@@ -158,3 +158,40 @@ input-container input {
     justify-content: flex-end;
     /* A gombot az aljára teszi */
 }
+
+/* Reszponzív beállítások */
+@media (max-width: 768px) {
+    body {
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid #181818;
+        padding: 10px;
+    }
+
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    textarea {
+        max-width: 100%;
+        width: 100%;
+        height: 120px;
+    }
+}
