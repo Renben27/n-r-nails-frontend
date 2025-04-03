@@ -8,30 +8,19 @@ async function sendMessage() {
     const phone = document.getElementById('phone').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('uzenet').value;
-    console.log(email, name, phone, message);
+    console.log( name, phone, email, message);
 
-    const res = await fetch('/api/contact', {
+    const res = await fetch('/contact', {
         method: 'POST',
+        credentials: 'include',
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify({ 
-            nev: name, 
-            telefon: phone, 
-            email: email, 
-            uzenet: message })
+        body: JSON.stringify({ nev,telefon, email,  uzenet })
     });
-    console.log(res); 
-    if (!res.ok) {
-        throw new Error(`HTTP hiba! Status: ${res.status}`);
-    }
+    console.log(res);
     const data = await res.json();
-    console.log('Siker:', data);
-    alert('Sikeres felvitel!');
-    if (err) {
-        console.error('Hiba történt:', error);
-        alert('Hiba történt az adatok küldése során!');
-    }
+    /*document.getElementById('siker').textContent = data.message;*/
 }
 
 
