@@ -10,7 +10,7 @@ async function sendMessage() {
     const message = document.getElementById('uzenet').value;
     console.log( name, phone, email, message);
 
-    const res = await fetch('/contact', {
+    const res = await fetch('/api/contact', {
         method: 'POST',
         credentials: 'include',
         headers: {
