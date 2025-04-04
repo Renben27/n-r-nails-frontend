@@ -2,14 +2,15 @@ const profileIcon = document.getElementsByClassName('profile-icon')[0];
 const nailsLogo = document.getElementsByClassName('nailslogo')[0];
 const sendbtn = document.getElementById('send');
 
-sendbtn.addEventListener('click', sendMessage);
-async function sendMessage() {
+sendbtn.addEventListener('click', sendMessage(event));
+async function sendMessage(event) {
+    event.preventDefault();
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('uzenet').value;
     console.log(name, phone, email, message);
-/*
+
     const res = await fetch('/api/contact', {
         method: 'POST',
         credentials: 'include',
@@ -23,7 +24,6 @@ async function sendMessage() {
     console.log(data);
     document.getElementById('siker').textContent = data.message;
     console.error("Hiba történt a képek lekérésekor:", error);
-    */
 }
 
 
