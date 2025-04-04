@@ -8,21 +8,22 @@ async function sendMessage() {
     const phone = document.getElementById('phone').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('uzenet').value;
-    console.log( name, phone, email, message);
-
+    console.log(name, phone, email, message);
+/*
     const res = await fetch('/api/contact', {
         method: 'POST',
         credentials: 'include',
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify({ nev,telefon, email,  uzenet })
+        body: JSON.stringify({ nev, telefon, email, uzenet })
     });
     console.log(res);
     const data = await res.json();
     console.log(data);
     document.getElementById('siker').textContent = data.message;
     console.error("Hiba történt a képek lekérésekor:", error);
+    */
 }
 
 
