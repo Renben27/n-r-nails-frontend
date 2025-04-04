@@ -20,6 +20,8 @@ async function sendMessage() {
     });
     console.log(res);
     const data = await res.json();
+    document.getElementById('siker').textContent = data.message;
+    console.error("Hiba történt a képek lekérésekor:", error);
 }
 
 
