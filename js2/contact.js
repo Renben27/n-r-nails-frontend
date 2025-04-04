@@ -2,7 +2,7 @@ const profileIcon = document.getElementsByClassName('profile-icon')[0];
 const nailsLogo = document.getElementsByClassName('nailslogo')[0];
 const sendbtn = document.getElementById('send');
 
-sendbtn.addEventListener('click', sendMessage(event));
+sendbtn.addEventListener('click', sendMessage);
 async function sendMessage(event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
