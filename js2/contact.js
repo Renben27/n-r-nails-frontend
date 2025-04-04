@@ -2,14 +2,14 @@ const profileIcon = document.getElementsByClassName('profile-icon')[0];
 const nailsLogo = document.getElementsByClassName('nailslogo')[0];
 const sendbtn = document.getElementById('send');
 
-sendbtn.addEventListener('click', sendMessage);
+sendbtn.addEventListener('submit', sendMessage);
 async function sendMessage(event) {
     event.preventDefault();
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
+    const nev = document.getElementById('name').value;
+    const telefon = document.getElementById('phone').value;
     const email = document.getElementById('email').value;
-    const message = document.getElementById('uzenet').value;
-    console.log(name, phone, email, message);
+    const uzenet = document.getElementById('uzenet').value;
+    console.log(nev, telefon, email, uzenet);
 
     const res = await fetch('/api/contact', {
         method: 'POST',
