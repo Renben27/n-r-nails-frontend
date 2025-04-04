@@ -38,7 +38,7 @@ const nextBtn = document.getElementById("nextBtn");
 
 let scrollAmount = 0;
 const scrollStep = 260; // Egy elem szélessége + gap
-const autoScrollInterval = 3000; // 3 másodpercenként mozog
+const autoScrollInterval = 7000; // 3 másodpercenként mozog
 let autoScroll;
 
 // Automatikus görgetés indítása
@@ -57,7 +57,7 @@ function startAutoScroll() {
 // Automatikus görgetés leállítása (ha a felhasználó kattint)
 function stopAutoScroll() {
     clearInterval(autoScroll);
-    setTimeout(startAutoScroll, 5000); // 5 másodperc múlva újraindul
+    setTimeout(startAutoScroll, 500); //.... múlva újraindul
 }
 
 // Manuális léptetés
