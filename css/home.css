@@ -360,6 +360,12 @@ strong {
 
 /* Ensure nav is hidden by default on mobile */
 @media screen and (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.9rem;
+        /* Csökkentett betűméret */
+    }
 
     .profile-icon {
         top: 0px;
