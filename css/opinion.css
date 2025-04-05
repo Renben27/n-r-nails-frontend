@@ -75,7 +75,7 @@ body {
 .content {
     width: 75%;
     padding: 20px;
-    
+
 }
 
 .opinion {
@@ -213,52 +213,72 @@ input-container input {
         margin: 15px;
         margin-top: 20px;
     }
-    
+
     input::placeholder {
         font-size: 10px;
     }
-    
+
     .content {
         padding: 15px;
     }
-   
-    
+
+
     textarea {
         height: 120px;
     }
-    
+
     /* Új stílusok a label és textarea elrendezéséhez */
     .input-container {
-        flex-direction: column; /* A label és a textarea egymás alatt lesz */
-        align-items: flex-start; /* Balra igazítás */
-        gap: 5px; /* Kisebb távolság a label és a textarea között */
+        flex-direction: column;
+        /* A label és a textarea egymás alatt lesz */
+        align-items: flex-start;
+        /* Balra igazítás */
+        gap: 5px;
+        /* Kisebb távolság a label és a textarea között */
     }
-    
+
     label {
-        min-width: auto; /* Ne legyen fix szélesség */
-        margin-bottom: 5px; /* Távolság a label és a textarea között */
+        min-width: auto;
+        /* Ne legyen fix szélesség */
+        margin-bottom: 5px;
+        /* Távolság a label és a textarea között */
     }
-    
+
     textarea {
-        min-width: 50px; /* Teljes szélességű lesz */
-        max-width: 100%; /* Ne lógjon ki */
+        min-width: 50px;
+        /* Teljes szélességű lesz */
+        max-width: 100%;
+        /* Ne lógjon ki */
     }
+
     .logo {
         width: 70px;
         height: 70px;
     }
-    .opinion input{
+
+    .opinion input {
         width: 50px;
         height: 20px;
     }
-    .opinion input[value]{
+
+    .opinion input[value] {
         font-size: 12px;
     }
 }
 
-@media(max-width: 440px){
-    .container{
-        font-size: 10px;
-        
+@media(max-width: 440px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 200px;
+
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 50px;
+        overflow: hidden;
+        resize: none;
+        overflow-y: hidden;
     }
 }
