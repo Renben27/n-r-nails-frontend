@@ -23,7 +23,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: hidden;
+    margin: 15px;
 }
 
 .logo {
@@ -83,11 +83,6 @@ body {
 .content {
     width: 75%;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    box-sizing: border-box;
 }
 
 .opinion {
@@ -118,10 +113,8 @@ textarea {
     border-radius: 4px;
     width: 100%;
     max-width: 400px;
-    height: 120px;
-    resize: vertical;
-    font-size: 16px;
-    box-sizing: border-box;
+    width: 200px;
+    height: 70px;
 }
 
 input:hover {
@@ -164,7 +157,7 @@ label {
     font-weight: bold;
 }
 
-/* Reszponzív beállítások */
+/* Reszponzív beállítások 
 @media (max-width: 768px) {
     body {
         justify-content: flex-start;
@@ -199,9 +192,89 @@ label {
         width: 100%;
         height: 120px;
     }
+}
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+*/
+@media (max-width: 600px) {
+    .container {
+        font-size: 12px;
+        margin: 15px;
+        margin-top: 20px;
+    }
+
+    input::placeholder {
+        font-size: 10px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+
+    textarea {
+        height: 120px;
+    }
+
+    /* Új stílusok a label és textarea elrendezéséhez */
+    .input-container {
+        flex-direction: column;
+        /* A label és a textarea egymás alatt lesz */
+        align-items: flex-start;
+        /* Balra igazítás */
+        gap: 5px;
+        /* Kisebb távolság a label és a textarea között */
+    }
+
+    label {
+        min-width: auto;
+        /* Ne legyen fix szélesség */
+        margin-bottom: 5px;
+        /* Távolság a label és a textarea között */
+    }
+
+    textarea {
+        min-width: 50px;
+        /* Teljes szélességű lesz */
+        max-width: 100%;
+        /* Ne lógjon ki */
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
 
     .opinion input {
-        width: 80%;
-        max-width: 200px;
+        width: 50px;
+        height: 20px;
+    }
+
+    .opinion input[value] {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 440px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 200px;
+
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 50px;
+        overflow: hidden;
+        resize: none;
+        overflow-y: hidden;
     }
 }
