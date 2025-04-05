@@ -135,4 +135,8 @@ body {
     .save-btn{
         margin-top: 10px;
     }
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
 }

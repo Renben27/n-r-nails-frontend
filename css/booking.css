@@ -147,4 +147,11 @@ body {
         font-size: 2vw;
 
     }
+    p{
+        font-size: 14px;
+    }
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
 }
