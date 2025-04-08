@@ -31,7 +31,7 @@ logout.addEventListener('click', async () => {
     }
 });
 
-window.addEventListener('DOMContentLoaded', () => loadData);
+
 
 async function loadData() {
     const res = await fetch('/api/getProfile', {
@@ -101,3 +101,5 @@ profilSettings.addEventListener('submit', async (event) => {
 changePassword.addEventListener('click', () => {
     window.location.href = '/passwordchange.html';
 });
+
+loadData();
