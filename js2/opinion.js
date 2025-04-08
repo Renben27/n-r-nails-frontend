@@ -2,6 +2,7 @@ const nailsLogo = document.getElementsByClassName('logo')[0];
 const logout = document.getElementsByClassName('logout')[0];
 const myData = document.getElementById('myData');
 const myBooking = document.getElementById('myBooking');
+const sendbtn = document.getElementById('send');
 
 nailsLogo.addEventListener('click', () => {
     window.location.href = ('./home.html');
@@ -33,3 +34,22 @@ logout.addEventListener('click', async () => {
     }
 });
 
+sendbtn.addEventListener('submit', sendMessage);
+async function sendMessage(event) {
+    event.preventDefault();
+    const velemeny = document.getElementById('velemeny').value;
+    console.log(velemeny);
+
+    const res = await fetch('/api/velemeny', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({velemeny })
+    });
+    console.log(res);
+    if(err){
+        console.log(err);
+    };
+};
