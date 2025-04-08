@@ -26,10 +26,12 @@ async function sendMessage(event) {
         },
         body: JSON.stringify({ nev, telefon, email, uzenet })
     });
-    console.log(res);
-    const data = await res.json();
-    console.log(data);
-    document.getElementById('siker').textContent = data.message;
-}
+    if (res.ok) {
+        console.log(res);
+        alert ('Siker');
+    }else{
+        alert('Hiba');
+    }; 
+};
 
 
