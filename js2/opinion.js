@@ -49,6 +49,6 @@ async function sendMessage() {
     });
     console.log(res);
     if(err){
-        console.log(err);
+        console.log({error:"Hiba"},err);
     };
 };
