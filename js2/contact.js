@@ -1,6 +1,6 @@
 const profileIcon = document.getElementsByClassName('profile-icon')[0];
 const nailsLogo = document.getElementsByClassName('nailslogo')[0];
-const sendbtn = document.getElementById('send');
+const sendbtn = document.getElementById('submit');
 
 sendbtn.addEventListener('submit', sendMessage);
 async function sendMessage(event) {
@@ -23,7 +23,6 @@ async function sendMessage(event) {
     const data = await res.json();
     console.log(data);
     document.getElementById('siker').textContent = data.message;
-    console.error("Hiba történt a képek lekérésekor:", error);
 }
 
 
