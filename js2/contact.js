@@ -30,9 +30,9 @@ async function sendMessage(event) {
     });
     if (res.ok) {
         console.log(res);
-        alert ('Siker');
+        alert ('Nemsokára felvesszük veled a kapcsolatot!');
     }else{
-        alert('Hiba');
+        alert('Hiba az Hiba történt az adatküldés során.');
     }; 
 };
 
