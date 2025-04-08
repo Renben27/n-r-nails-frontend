@@ -1,33 +1,17 @@
-const servicesbutton = document.getElementById('services');
-const workbutton = document.getElementById('works');
-const aboutusbutton = document.getElementById('aboutus');
-const contactbutton = document.getElementById('contact');
 const profileIcon = document.getElementsByClassName('profile-icon')[0];
+const nailsLogo = document.getElementsByClassName('nailslogo')[0];
 const iconDate = document.getElementsByClassName('fixed')[0];
 
-
-servicesbutton.addEventListener('click', () => {
-    window.location.href = './Aservices.html';
-});
-
-workbutton.addEventListener('click', () => {
-    window.location.href = './Aourworks.html';
-});
-
-aboutusbutton.addEventListener('click', () => {
-    window.location.href = ('./Aaboutus.html');
-});
-
-contactbutton.addEventListener('click', () => {
-    window.location.href = ('./Acontact.html');
-});
-
 profileIcon.addEventListener('click', () => {
-    window.location.href = ('./Apersonaldata.html');
+    window.location.href = ('./personaldata.html');
+});
+
+nailsLogo.addEventListener('click', () => {
+    window.location.href = ('./home.html');
 });
 
 iconDate.addEventListener('click', () => {
-    window.location.href = './Aservices.html';
+    window.location.href = './services.html';
 });
 
 
@@ -70,8 +54,6 @@ nextBtn.addEventListener("click", () => {
     stopAutoScroll();
 });
 
-
-
 prevBtn.addEventListener("click", () => {
     if (scrollAmount > 0) {
         scrollAmount -= scrollStep;
@@ -82,4 +64,4 @@ prevBtn.addEventListener("click", () => {
 
 // Indítás oldalbetöltéskor
 startAutoScroll();
-
+//admin
