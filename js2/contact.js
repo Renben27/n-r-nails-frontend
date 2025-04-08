@@ -5,8 +5,8 @@ const sendbtn = document.getElementById('send');
 sendbtn.addEventListener('submit', sendMessage);
 async function sendMessage(event) {
     event.preventDefault();
-    const nev = document.getElementById('name').value;
-    const telefon = document.getElementById('phone').value;
+    const nev = document.getElementById('nev').value;
+    const telefon = document.getElementById('telefon').value;
     const email = document.getElementById('email').value;
     const uzenet = document.getElementById('uzenet').value;
     console.log(nev, telefon, email, uzenet);
