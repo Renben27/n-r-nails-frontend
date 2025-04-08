@@ -35,8 +35,7 @@ logout.addEventListener('click', async () => {
 });
 
 sendbtn.addEventListener('submit', sendMessage);
-async function sendMessage(event) {
-    event.preventDefault();
+async function sendMessage() {
     const velemeny = document.getElementById('velemeny').value;
     console.log(velemeny);
 
