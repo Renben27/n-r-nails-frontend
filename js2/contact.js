@@ -1,6 +1,13 @@
 const profileIcon = document.getElementsByClassName('profile-icon')[0];
 const nailsLogo = document.getElementsByClassName('nailslogo')[0];
-const sendbtn = document.getElementById('submit');
+const sendbtn = document.getElementById('send');
+profileIcon.addEventListener('click', () => {
+    window.location.href = ('./personaldata.html');
+});
+
+nailsLogo.addEventListener('click', () => {
+    window.location.href = ('./home.html');
+});
 
 sendbtn.addEventListener('submit', sendMessage);
 async function sendMessage(event) {
@@ -26,10 +33,3 @@ async function sendMessage(event) {
 }
 
 
-profileIcon.addEventListener('click', () => {
-    window.location.href = ('./personaldata.html');
-});
-
-nailsLogo.addEventListener('click', () => {
-    window.location.href = ('./home.html');
-});
