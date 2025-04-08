@@ -1,6 +1,5 @@
 const profileIcon = document.getElementsByClassName('profile-icon')[0];
 const nailsLogo = document.getElementsByClassName('nailslogo')[0];
-const sendbtn = document.getElementById('send');
 profileIcon.addEventListener('click', () => {
     window.location.href = ('./personaldata.html');
 });
@@ -9,9 +8,12 @@ nailsLogo.addEventListener('click', () => {
     window.location.href = ('./home.html');
 });
 
-sendbtn.addEventListener('submit', sendMessage);
+const form = document.querySelector('form'); // Kiválasztja a form elemet
+form.addEventListener('submit', sendMessage);
+
 async function sendMessage(event) {
     event.preventDefault();
+
     const nev = document.getElementById('nev').value;
     const telefon = document.getElementById('telefon').value;
     const email = document.getElementById('email').value;
