@@ -24,6 +24,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
+    margin: 20px;
 }
 .logo {
     position: absolute;
@@ -122,7 +123,7 @@ body {
     color: #000;
 }
 
-@media screen {
+@media (max-width:550px ){
     .container{
         font-size: 4vw;
         font-size: small;
