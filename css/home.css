@@ -9,7 +9,7 @@ body {
     font-family: "Jim Nightshade", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 80px;
+    
     color: black;
     position: relative;
     top: -60px;
@@ -30,45 +30,55 @@ body {
     font-style: normal;
 }
 .logo-container {
-    flex-shrink: 0; /* Biztosítja, hogy a logó ne zsugorodjon */
-    margin: 0 20px; /* Térköz a logó körül */
-  }
-  
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Középre helyezi a tartalmat */
+}
+
 .logo-img {
     width: 100px;
     height: auto;
     border-radius: 100%;
-    margin-top: 0px;
     cursor: pointer;
 }
-.left-nav, .right-nav {
+
+.left-nav {
     display: flex;
-    gap: 20px; 
+    gap: 4rem;
+    margin-top: 70px;
+    margin-left: 70px; flex: 1;
+    max-width: 33%;
+    display: flex;
+    justify-content: space-around;
 }
+
+.right-nav {
+    margin-right: 100px;
+    display: flex;
+    gap: 4rem;
+    margin-top: 70px; flex: 1;
+    max-width: 33%;
+    display: flex;
+    justify-content: space-around;
+}
+
 header {
     background-color: #886383;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;
-    /* Középre helyezi a tartalmat */
-    align-items: center;
-    flex-direction: column;
-    /* A logo és a navigáció alá-fölé kerül */
-    border-bottom: 2px solid #000;
-    /* 2px vastagságú fekete vonal */
-    padding-bottom: 10px;
-    /* Térköz a vonal és a szöveg között */
-    overflow: visible;
-    /* Fontos, hogy a lekerekítés működjön */
+    height: 100px; /* vagy nagyobb, ha szükséges */
+    padding: 0 20px;
     position: sticky;
-    width: 100%;
-    padding: 0px;
     top: 0;
-    left: 0;
     z-index: 1000;
-    border-bottom: none;
-    height: 90px;
+    background-color: #886383;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 .profile-icon {
     position: absolute;
@@ -78,17 +88,21 @@ header {
     /* Jobb oldali távolság */
     font-size: 45px;
     /* Ikon mérete */
-    margin-top: 23px;
+    margin-top: 15px;
     cursor: pointer;
+    z-index: 1000;
 }
+
 nav {
     display: flex;
-    justify-content: space-between; /* Távolságot tart a bal és jobb oldali linkek között */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 20px; /* Oldalsó térköz */
-  }
-  
+    padding: 0 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
 
 header nav a:hover {
     text-decoration: underline;
@@ -101,7 +115,10 @@ header nav a:hover {
     /* Maximális szélesség (ha a képernyőn nagyobb lenne a 70%) */
     border-bottom: 2px solid black;
     /* Vonal vastagsága és színe */
-    margin: 0 auto;
+    margin-top: 100px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
     /* Középre igazítja a vonalat, és távolságot ad a menüpontoktól */
 }
 
@@ -116,6 +133,7 @@ header nav a:hover {
     color: #886383;
     padding: 100px;
     overflow: hidden;
+    font-size: 80px;
 }
 
 .hero::before {
@@ -330,6 +348,10 @@ strong {
     margin: 2px;
     z-index: 1000 !important;
 }
+/*@media screen and (max-width: 1400px) {
+    .left-nav, .right-nav{
+        gap: 8rem;
+    }}
 
 @media screen and (min-width: 1500px) {
     #nextBtn {
@@ -342,7 +364,15 @@ strong {
 }
 
 /* Ensure nav is hidden by default on mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
+    .left-nav, .right-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo-container {
+        order: -1; /* logó legyen felül */
+    }
     .contact-section {
         flex-direction: column;
         text-align: center;
@@ -386,8 +416,6 @@ strong {
         /* Position below the header */
         left: 0;
         width: 100vw;
-        height: calc(100vh - 100%);
-        padding: 10px 0;
         gap: 0px !important;
     }
 
@@ -407,8 +435,8 @@ strong {
 
     nav a {
         flex-direction: column;
-        margin: 10px 0;
-        font-size: 15px;
+        margin: 0 auto 0 auto;
+        font-size: 20px;
         width: auto !important;
     }
 
@@ -422,7 +450,36 @@ strong {
     }
 
     body {
-        font-size: smaller;
+        font-size: 1rem;
+    }
+    .hero, h1{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .hero, h1{
+        font-size: 3rem;
+    }
+    .container{
+        font-size: 1rem;
+    }
+    .left-nav, .right-nav {
+      margin: 70px 30px 0 30px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .logo-container {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: 10px 22px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        left: 2.2%;
     }
 }
 /*nav {
