@@ -227,7 +227,7 @@ footer p {
     font-style: normal;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
     body {
         font-size: 0.9rem;
     }
