@@ -102,7 +102,9 @@ nav {
     box-sizing: border-box;
     position: relative;
 }
-
+header nav a {
+    color: black;
+}
 
 header nav a:hover {
     text-decoration: underline;
@@ -452,23 +454,16 @@ strong {
     body {
         font-size: 1rem;
     }
-    .hero, h1{
-        font-size: 3rem;
-    }
+    .left-nav, .right-nav {
+        margin: 20px 30px 0 30px;
+      }
 }
 @media screen and (max-width: 1200px) {
-    .hero, h1{
+    .hero{
         font-size: 3rem;
     }
     .container{
         font-size: 1rem;
-    }
-    .left-nav, .right-nav {
-      margin: 70px 30px 0 30px;
-    }
-
-    nav {
-        flex-wrap: wrap;
     }
 
     .logo-container {
