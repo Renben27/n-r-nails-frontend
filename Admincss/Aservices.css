@@ -46,6 +46,21 @@ header {
     border-radius: 50%;
 }
 
+.fixed {
+    position: fixed;
+    right: 1%;
+    top: 75%;
+    z-index: 1000;
+    background-color: #886383;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: ease 500ms;
+}
 
 /*törzsben lévő dolgok beállításai*/
 /* Kártyák konténer */
