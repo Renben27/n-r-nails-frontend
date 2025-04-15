@@ -40,7 +40,7 @@ body {
 }
 
 .logo-img {
-    width: 100px;
+    width: 110px;
     height: auto;
     border-radius: 100%;
     cursor: pointer;
@@ -104,6 +104,7 @@ nav {
 }
 header nav a {
     color: black;
+    font-size: 25px;
 }
 
 header nav a:hover {
@@ -350,20 +351,6 @@ strong {
     margin: 2px;
     z-index: 1000 !important;
 }
-/*@media screen and (max-width: 1400px) {
-    .left-nav, .right-nav{
-        gap: 8rem;
-    }}
-
-@media screen and (min-width: 1500px) {
-    #nextBtn {
-        margin-right: 150px;
-    }
-
-    #prevBtn {
-        margin-left: 150px;
-    }
-}
 
 /* Ensure nav is hidden by default on mobile */
 @media screen and (max-width: 810px) {
@@ -477,54 +464,3 @@ strong {
         left: 2.2%;
     }
 }
-/*nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px 20px;
-}
-
-.left-nav, .right-nav {
-    display: flex;
-    gap: 20px;
-}
-
-.logo-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.logo-img {
-    width: 100px;
-    height: auto;
-    border-radius: 100%;
-}
-    
-
-
-header nav {
-    display: flex;
-    justify-content: stretch;
-    /*Egyenlő távolság a menüpontok között 
-    gap: 50px;
-    /*Távolság a menüpontok között 
-    /*width: 75%;
-    /*A navigáció szélessége 
-    margin: 0;
-    /*Nincs extra távolság a fejléc és a navigáció között 
-    position: relative;
-    /* Fontos, hogy a vonal helyzete ehhez igazodjon 
-    /*padding: 0;
-    /* Nincs belső távolság 
-}
-header nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: 63px;
-    width: 1%;
-    text-align: center;
-}*/
