@@ -9,7 +9,7 @@ body {
     font-family: "Jim Nightshade", serif;
     font-weight: 400;
     font-style: normal;
-    
+
     color: black;
     position: relative;
     top: -60px;
@@ -29,6 +29,7 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
 .logo-container {
     position: absolute;
     left: 50%;
@@ -36,7 +37,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Középre helyezi a tartalmat */
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 20px;
 }
 
 .logo-img {
@@ -50,7 +53,8 @@ body {
     display: flex;
     gap: 4rem;
     margin-top: 70px;
-    margin-left: 70px; flex: 1;
+    margin-left: 70px;
+    flex: 1;
     max-width: 33%;
     display: flex;
     justify-content: space-around;
@@ -60,7 +64,8 @@ body {
     margin-right: 100px;
     display: flex;
     gap: 4rem;
-    margin-top: 70px; flex: 1;
+    margin-top: 70px;
+    flex: 1;
     max-width: 33%;
     display: flex;
     justify-content: space-around;
@@ -68,7 +73,8 @@ body {
 
 header {
     background-color: #886383;
-    height: 100px; /* vagy nagyobb, ha szükséges */
+    height: 100px;
+    /* vagy nagyobb, ha szükséges */
     padding: 0 20px;
     position: sticky;
     top: 0;
@@ -90,7 +96,7 @@ header {
     /* Ikon mérete */
     margin-top: 15px;
     cursor: pointer;
-    z-index: 1000;
+    
 }
 
 nav {
@@ -102,6 +108,7 @@ nav {
     box-sizing: border-box;
     position: relative;
 }
+
 header nav a {
     color: black;
     font-size: 25px;
@@ -354,14 +361,8 @@ strong {
 
 /* Ensure nav is hidden by default on mobile */
 @media screen and (max-width: 810px) {
-    .left-nav, .right-nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
+   
 
-    .logo-container {
-        order: -1; /* logó legyen felül */
-    }
     .contact-section {
         flex-direction: column;
         text-align: center;
@@ -370,13 +371,7 @@ strong {
     }
 
     .profile-icon {
-        top: 0px;
-        /* Felső távolság */
-        right: 20px;
-        /* Jobb oldali távolság */
-        font-size: 45px;
-        /* Ikon mérete */
-        margin-top: 23px;
+        font-size: 35px;
     }
 
     .header-line {
@@ -441,15 +436,29 @@ strong {
     body {
         font-size: 1rem;
     }
-    .left-nav, .right-nav {
+
+    .left-nav,
+    .right-nav {
         margin: 20px 30px 0 30px;
-      }
-}
-@media screen and (max-width: 1200px) {
-    .hero{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .left-nav a,
+    .right-nav a{
+        font-size: 1.2rem;
+    }
+    .hero h1, strong{
         font-size: 3rem;
     }
-    .container{
+}
+
+@media screen and (max-width: 1200px) {
+    .hero {
+        font-size: 3rem;
+    }
+
+    .container {
         font-size: 1rem;
     }
 

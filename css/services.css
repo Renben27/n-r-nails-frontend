@@ -1,4 +1,4 @@
-* {
+* {  
     margin: 0;
 }
 
@@ -62,7 +62,7 @@ header {
 
 /* Kártya konténer */
 .card {
-    display: flex;;
+    display: flex;
     /* Flexbox a kép és tartalom igazításához */
     max-width: 500px;
     /* Maximális szélesség */
@@ -178,7 +178,17 @@ footer p {
     font-weight: 500;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 810px) {
+    header h1{
+        font-size: 1.5rem;
+    }
+    .profile-icon i{
+        font-size: 35px;
+    }
+    .logo img {
+        height: 70px;
+        width: 70px;
+    }
     .cards-container {
         grid-template-columns: 1fr;
         /* Egy oszlopos elrendezés kisebb képernyőkön */
@@ -192,7 +202,6 @@ footer p {
     footer p{
         font-size: 0.9rem;
     }
-    
 }
 @media (max-width: 1000px) {
     .card {

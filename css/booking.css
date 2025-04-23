@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    margin: 20px;
     width: 100%;
     background-color: #fff;
     padding: 20px;
@@ -121,6 +121,15 @@ body {
 .logout a:hover {
     text-decoration: underline;
 }
+@media (max-width: 810px) {
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+    .container{
+        font-size: 0.8rem;
+    }
+}
 @media screen and (max-width: 545px){
     
     .dropdown-content {
@@ -141,8 +150,5 @@ body {
     p{
         font-size: 14px;
     }
-    .logo {
-        width: 70px;
-        height: 70px;
-    }
+    
 }
