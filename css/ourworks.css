@@ -215,9 +215,14 @@ footer p {
     }
 
     .contact-section {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.9rem;
+        /* Csökkentett betűméret */
+    }
+    footer p{
         font-size: 0.9rem;
     }
-
     .profile-icon {
         font-size: 45px;
     }
