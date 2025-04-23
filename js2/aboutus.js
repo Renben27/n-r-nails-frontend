@@ -21,12 +21,13 @@ const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
 let scrollAmount = 0;
-const scrollStep = 260; // Egy elem szélessége + gap
-const autoScrollInterval = 3000; // 3 másodpercenként mozog
+const scrollStep = 300; // Egy elem szélessége + gap
+const autoScrollInterval = 9000; // 3 másodpercenként mozog
 let autoScroll;
 
 // Automatikus görgetés indítása
 function startAutoScroll() {
+    stopAutoScroll();
     autoScroll = setInterval(() => {
         const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
         if (scrollAmount >= maxScroll) {
@@ -41,7 +42,7 @@ function startAutoScroll() {
 // Automatikus görgetés leállítása (ha a felhasználó kattint)
 function stopAutoScroll() {
     clearInterval(autoScroll);
-    setTimeout(startAutoScroll, 5000); // 5 másodperc múlva újraindul
+    
 }
 
 // Manuális léptetés
