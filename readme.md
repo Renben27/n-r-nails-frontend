@@ -45,6 +45,9 @@ Az N&R Nails weboldal frontendje a felhasználói felület kialakításáért é
 - Asztali:
 ![image](https://github.com/user-attachments/assets/07ec2323-3ebc-4d25-ab05-b8a5686029cd)
 
+---
+## 🛠️Telepítés
+git clone https://github.com/felhasznalonev/.git
 
 ---
 ## 💻Projekt struktúrája
