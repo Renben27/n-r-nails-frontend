@@ -183,6 +183,15 @@ footer p {
         grid-template-columns: 1fr;
         /* Egy oszlopos elrendezés kisebb képernyőkön */
     }
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.9rem;
+        /* Csökkentett betűméret */
+    }
+    footer p{
+        font-size: 0.9rem;
+    }
     
 }
 @media (max-width: 1000px) {
