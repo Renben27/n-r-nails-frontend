@@ -88,7 +88,7 @@ Swal.fire({
       no-repeat
     `
   });*/
-import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/+esm';
+
 appointmentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
