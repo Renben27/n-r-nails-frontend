@@ -83,37 +83,26 @@ startAutoScroll();
 
 
 // Vélemények betöltése az API-ról
-function loadOpinions(offset = 0) {
-    fetch(`/api/getopinions?offset=${offset}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Hiba a vélemények lekérdezésekor.');
-            }
-            return response.json();
-        })
-        .then(data => {
-            wrapper.innerHTML = ''; // Töröljük az előző véleményeket
+async function loadOpinions(offset = 0) {
+    const res = await fetch(`/api/getopinions?offset=${offset}`);
+    if (!res.ok)
+        return;
 
-            data.forEach(review => {
-                const box = document.createElement('div');
-                box.classList.add('review-box');
-                box.innerHTML = `
-                    <p class="name">${review.nev}</p>
-                    <p class="opinions">-${review.velemeny}</p>
-                    <p  class="date">${new Date(review.datum).toLocaleDateString('hu-HU')}</p><br>
- 
-                `;
-                wrapper.appendChild(box);
-            });
+    const opinions = await res.json();
+    const lista = document.querySelector('.reviews-wrapper');
+    lista.innerHTML = ''; // előző vélemények törlése
 
-            // Reset scroll pozíció
-            scrollAmount = 0;
-            wrapper.style.transform = `translateX(0px)`;
-        })
-        .catch(error => {
-            console.error(error);
-        });
+    opinions.forEach(opinion => {
+        lista.innerHTML += `
+            <div class="reviews-box">
+                <p class="name">${opinion.nev}</p>
+                <p class="opinions">"${opinion.velemeny}"</p>
+                <p class="date">${new Date(opinion.datum).toLocaleDateString('hu-HU')}</p>
+            </div>
+        `;
+    });
 }
+
 
 // Oldal betöltésekor vélemények betöltése
 document.addEventListener('DOMContentLoaded', () => {
