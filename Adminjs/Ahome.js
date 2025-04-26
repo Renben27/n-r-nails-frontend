@@ -7,7 +7,7 @@ const iconDate = document.getElementsByClassName('fixed')[0];
 
 
 servicesbutton.addEventListener('click', () => {
-    window.location.href = './Adminhtml/Aservices.html';
+    window.location.href = './Aservices.html';
 });
 
 workbutton.addEventListener('click', () => {
