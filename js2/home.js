@@ -98,9 +98,9 @@ function loadOpinions(offset = 0) {
                 const box = document.createElement('div');
                 box.classList.add('review-box');
                 box.innerHTML = `
-                    <strong>${review.nev}</strong><br>
-                    <small>${new Date(review.datum).toLocaleDateString('hu-HU')}</small><br>
-                    "${review.velemeny}"
+                    <strong>${review.nev}</strong>
+                    <p style="color: grey;">${new Date(review.datum).toLocaleDateString('hu-HU')}</p><br>
+                    <p>-${review.velemeny}</p>
                 `;
                 wrapper.appendChild(box);
             });
