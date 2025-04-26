@@ -6,13 +6,13 @@ const changePassword = document.getElementsByClassName('change-password')[0];
 const profilSettings = document.getElementById('profilSettings');
 
 nailsLogo.addEventListener('click', () => {
-    window.location.href = ('./Ahome.html');
+    window.location.href = ('./Adminhtml/Ahome.html');
 });
 myBooking.addEventListener('click', () => {
-    window.location.href = ('./Abooking.html');
+    window.location.href = ('./Adminhtml/Abooking.html');
 });
 myOpinion.addEventListener('click', () => {
-    window.location.href = ('./Aopinion.html');
+    window.location.href = ('./Adminhtml/Aopinion.html');
 });
 logout.addEventListener('click', async () => {
     const res = await fetch('/api/logout', {
@@ -99,7 +99,7 @@ profilSettings.addEventListener('submit', async (event) => {
 });
 // Jelszó módosítás link eseménye
 changePassword.addEventListener('click', () => {
-    window.location.href = '/Apasswordchange.html';
+    window.location.href = './Adminhtml/Apasswordchange.html';
 });
 
 loadData();

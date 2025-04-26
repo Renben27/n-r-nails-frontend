@@ -2,11 +2,11 @@ const profileIcon = document.getElementsByClassName('profile-icon')[0];
 const nailsLogo = document.getElementsByClassName('nailslogo')[0];
 
 profileIcon.addEventListener('click', () => {
-    window.location.href = ('./Apersonaldata.html');
+    window.location.href = ('./Adminhtml/Apersonaldata.html');
 });
 
 nailsLogo.addEventListener('click', () => {
-    window.location.href = ('./Ahome.html');
+    window.location.href = ('./Adminhtml/Ahome.html');
 });
 
 //képek megjelenítése feltöltés után KÉSZ
