@@ -38,12 +38,8 @@ body {
 }
 .card {
     display: flex;
-    /* Flexbox a kép és tartalom igazításához */
-   
     background-color: #ffffff;
-    /* Háttérszín */
     border-radius: 20px;
-    /* Lekerekített sarkok */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     /* Árnyék */
     overflow: hidden;
@@ -60,24 +56,20 @@ body {
     object-fit: cover;
     /* Kép kitöltése */
 }
-/* Kártya tartalmának beállítása */
 .card-content {
     padding: 20px;
     display: flex;
-    flex-direction: column;    /* Tartalom függőleges elrendezése */
+    flex-direction: column;/* Tartalom függőleges elrendezése */
     justify-content: center;
     text-align: left;
-    /* Balra igazítás */
 }
 
-/* Cím stílus */
 .card-title {
     font-size: 1.5rem;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-/* Szöveg stílus */
 p {
     font-size: 1rem;
     margin: 5px 0;
@@ -94,7 +86,7 @@ footer {
     padding: 10px 20px;
     margin-top: 20px;
     border-top: none;
-    /* Ha a lábléc okoz egy felső vonalat */
+    /* Mert a lábléc okoz egy felső vonalat */
 }
 
 footer p {
@@ -119,14 +111,12 @@ footer p {
 
 .contact-item img {
     width: 24px;
-    /* Ikon mérete */
     height: 24px;
 }
 
 .contact-item span {
     font-size: 16px;
     color: #000;
-    /* Szöveg színe */
 }
 
 .contact-section span {
@@ -236,11 +226,8 @@ footer p {
 .profile-icon {
     position: absolute;
     top: 0px;
-    /* Felső távolság */
     right: 20px;
-    /* Jobb oldali távolság */
     font-size: 45px;
-    /* Ikon mérete */
     margin-top: 23px;
 }
 
@@ -254,8 +241,8 @@ footer p {
     position: absolute; /* Az ikonok a jobb felső sarokban lesznek */
     top: 20px;
     right: 20px;
-    align-items: center; /* Függőleges középre igazítás */
-    gap: 20px;  /* Távolság az ikonok között */
+    align-items: center;
+    gap: 20px;
     flex-direction: row;
     grid-template-columns: repeat(2, 1fr);
     display: grid;
@@ -294,7 +281,7 @@ form input[type="checkbox"] {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    accent-color: #886383; /* Szín beállítása */
+    accent-color: #886383;
 }
 
 /* Formázott inputok és gomb */

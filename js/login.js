@@ -28,7 +28,7 @@ async function login() {
             window.location.href = './admin.html';
         } else {
             alert(data.message);
-            window.location.href = './home.html';/*vissza juttat a masik oldalra*/
+            window.location.href = './home.html';
         }
     } else if (data.errors) {
         let errorMessage = '';

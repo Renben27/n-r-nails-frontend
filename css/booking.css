@@ -2,13 +2,9 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('/images/hatter18.jfif');
-    /*Itt cseréld ki az elérési útra */
     background-size: cover;
-    /* A kép kitölti az egész hátteret */
     background-position: center;
-    /* A kép középre lesz igazítva */
     background-repeat: no-repeat;
-    /* Nem ismétlődik a kép */
     color: #886383;
     display: flex;
     justify-content: center;

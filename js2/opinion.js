@@ -2,7 +2,6 @@ const nailsLogo = document.getElementsByClassName('logo')[0];
 const logout = document.getElementsByClassName('logout')[0];
 const myData = document.getElementById('myData');
 const myBooking = document.getElementById('myBooking');
-//const sendbtn = document.getElementById('send');
 
 nailsLogo.addEventListener('click', () => {
     window.location.href = ('./home.html');
@@ -33,26 +32,7 @@ logout.addEventListener('click', async () => {
         alert("hiba a kijelentkezéskor");
     }
 });
-/*
-sendbtn.addEventListener('submit', sendMessage);
-async function sendMessage() {
-    const velemeny = document.getElementById('velemeny').value;
-    console.log(velemeny);
 
-    const res = await fetch('/api/velemeny', {
-        method: 'POST',
-        credentials: 'include',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify({velemeny })
-    });
-    console.log(res);
-    if(err){
-        console.error("Hiba", error);
-    };
-};
-*/
 const form = document.querySelector('form'); // Kiválasztja a form elemet
 form.addEventListener('submit', sendMessage);
 

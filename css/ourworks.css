@@ -164,7 +164,7 @@ footer {
     padding: 10px 20px;
     margin-top: 20px;
     border-top: none;
-    /* Ha a lábléc okoz egy felső vonalat */
+    /* Mert a lábléc okoz egy felső vonalat */
 }
 
 footer p {
@@ -189,14 +189,12 @@ footer p {
 
 .contact-item img {
     width: 24px;
-    /* Ikon mérete */
     height: 24px;
 }
 
 .contact-item span {
     font-size: 16px;
     color: #000;
-    /* Szöveg színe */
 }
 
 .contact-section span {
@@ -218,7 +216,6 @@ footer p {
         flex-direction: column;
         text-align: center;
         font-size: 0.9rem;
-        /* Csökkentett betűméret */
     }
     footer p{
         font-size: 0.9rem;

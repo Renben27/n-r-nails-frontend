@@ -15,6 +15,7 @@ header {
     left: 0;
     z-index: 1000;
     position: sticky;
+    height: 70px;
 }
 
 .kalam-regular {
@@ -31,7 +32,6 @@ header {
     color: #000000;
     position: relative;
     margin-bottom: 20px;
-    /* Csökkenti a szöveg alatti távolságot */
 }
 
 .profile-icon i {
@@ -77,7 +77,6 @@ header {
     width: 100%;
     height: 100%;
     background-image: url('/images/szalon3.webp');
-    /* Háttérkép helye */
     background-size: cover;
     background-position: center;
     opacity: 0.3;
@@ -109,17 +108,9 @@ header {
 }
 
 h1 {
-    font-size: 45px;
     color: #000000;
     text-align: center;
     margin: 10px 0;
-}
-
-.subheading {
-    font-size: 18px;
-    text-align: center;
-    line-height: 1.8;
-    margin-bottom: 30px;
 }
 
 .content {
@@ -251,15 +242,15 @@ footer {
 
 .reviews-wrapper {
     display: flex;
-    /* inline-flex helyett flex, hogy megfelelően illeszkedjen */
+    /* flex, hogy megfelelően illeszkedjen */
     gap: 10px;
     transition: transform 10s ease-in-out;
     /* Finom mozgás */
 }
 
-.review-box {
+.reviews-box {
     min-width: 250px;
-    max-width: 450px;
+    max-width: 400px;
     min-height: 150px;
     max-height: 200px;
     padding: 15px;
@@ -269,7 +260,20 @@ footer {
     overflow-wrap: break-word;
     white-space: normal;
 }
-
+.name{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    font-weight: 800;
+    font-size: 20px;
+}
+.date{
+    justify-content: end;
+    align-items: flex-end;
+    text-align: end;
+    color: grey;
+}
+.opinions{
+    overflow-wrap: break-word;
+}
 #nextBtn {
     background-color: #c99ec2;
     font-size: 20px;
@@ -291,7 +295,6 @@ footer {
     margin: 2px;
     z-index: 1000 !important;
 }
-
 @media screen and (min-width: 1500px) {
     #nextBtn {
         margin-right: 150px;
@@ -299,6 +302,42 @@ footer {
 
     #prevBtn {
         margin-left: 150px;
+    }
+}
+@media screen and (max-width: 810px) {
+    body{
+        font-size: 0.9rem;
+    }
+    section, .hero .dancing-script{
+        font-size: 1.8rem;
+    }
+    section, .hero .dancing-script strong{
+        font-size: 2.1rem;
+    }
+    main div .cim{
+        font-size: 1.6rem;
+    }
+    main div .alszoveg{
+        font-size: 1.1rem;
+        margin-left: 5px;
+    }
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    .footer p{
+        font-size: 1.6rem;
+    }
+    header h1{
+        font-size: 1.5rem;
+    }
+    .profile-icon i{
+        font-size: 35px;
+    }
+    .logo img {
+        height: 70px;
+        width: 70px;
     }
 }
 /*admin*/
