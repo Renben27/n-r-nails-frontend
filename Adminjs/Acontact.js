@@ -2,11 +2,11 @@ const profileIcon = document.getElementsByClassName('profile-icon')[0];
 const nailsLogo = document.getElementsByClassName('nailslogo')[0];
 const sendbtn = document.getElementById('send');
 profileIcon.addEventListener('click', () => {
-    window.location.href = ('./Adminhtml/Apersonaldata.html');
+    window.location.href = ('./Apersonaldata.html');
 });
 
 nailsLogo.addEventListener('click', () => {
-    window.location.href = ('./Adminhtml/Ahome.html');
+    window.location.href = ('./Ahome.html');
 });
 
 sendbtn.addEventListener('submit', sendMessage);
