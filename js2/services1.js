@@ -33,7 +33,7 @@ async function loadCategoryData() {
         const response = await fetch(`/api/category-data/${categoryId}`);
         const data = await response.json();
 
-        if (!data || !data.kategoria || !data.szolgaltatasok) {
+        if (!data || !data.kategoriak || !data.szolgaltatasok) {
             console.error('Hiányos adatok érkeztek');
             return;
         }
@@ -45,9 +45,9 @@ async function loadCategoryData() {
         card.classList.add('card');
 
         card.innerHTML = `
-            <img src="/uploads/${data.kategoria.kep}" alt="${data.kategoria.nev}" class="card-image">
+            <img src="/uploads/${data.kategoriak.kep}" alt="${data.kategoriak.nev}" class="card-image">
             <div class="card-content">
-                <h1 class="card-title">${data.kategoria.nev}</h1>
+                <h1 class="card-title">${data.kategoriak.nev}</h1>
                 <form id="services-form">
                     ${data.szolgaltatasok.map(service => `
                         <label>

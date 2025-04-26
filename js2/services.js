@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             data.forEach(function (item) {
                 if (!categories[item.kategoria_id]) {
                     categories[item.kategoria_id] = {
-                        nev: item.kategoria_nev,
+                        nev: item.nev,
                         kep: item.kep,
                         services: []
                     };
@@ -73,10 +73,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
 
                 // Létrehozzuk az egyedi gomb ID-t (pl: pedikur-button)
-                var safeCategoryName = category.nev.toLowerCase()
+                /*var safeCategoryName = category.nev.toLowerCase()
                     .replace(/\s+/g, '-') // szóköz helyett kötőjel
                     .replace(/[^\w\-]/g, ''); // ékezetek, spec karakterek kiszűrése
-
+*/
                 var buttonId = 'category-button-' + kategoria_id;
 
                 card.innerHTML = `
