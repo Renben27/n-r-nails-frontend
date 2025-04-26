@@ -26,7 +26,7 @@ async function register() {
 
     if (res.ok) {
         alert(data.message);
-        window.location.href = './login.html';/*vissza juttat a masik oldalra ha kesz*/
+        window.location.href = './login.html';
     } else if (data.errors) {
         let errorMessage= '';
         for (let i =0; i < data.errors.length; i++){

@@ -2,13 +2,9 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('/images/hatter18.jfif');
-    /*Itt cseréld ki az elérési útra */
     background-size: cover;
-    /* A kép kitölti az egész hátteret */
     background-position: center;
-    /* A kép középre lesz igazítva */
     background-repeat: no-repeat;
-    /* Nem ismétlődik a kép */
     color: #886383;
     display: flex;
     justify-content: center;
@@ -134,7 +130,6 @@ form {
     flex-direction: column;
     /* Az űrlap elemei egymás alatt maradnak */
     gap: 10px;
-    /* Távolság az elemek között */
 }
 
 .input-container {
@@ -142,12 +137,10 @@ form {
     align-items: flex-start;
     /* A label a textarea tetejéhez igazodik */
     gap: 10px;
-    /* Kis távolság a label és a textarea között */
 }
 
 label {
     min-width: 120px;
-    /* Fix szélesség, hogy ne törjön */
     text-align: left;
 }
 
@@ -156,57 +149,9 @@ input-container input {
     display: flex;
     flex-direction: column;
     height: 300px;
-    /* Példa magasság */
     justify-content: flex-end;
-    /* A gombot az aljára teszi */
 }
 
-/* Reszponzív beállítások 
-@media (max-width: 768px) {
-    body {
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .profile {
-        flex-direction: column;
-    }
-
-    .menu {
-        width: 100%;
-        text-align: center;
-        border-right: none;
-        border-bottom: 1px solid #181818;
-        padding: 10px;
-    }
-
-    .content {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .logo {
-        width: 60px;
-        height: 60px;
-    }
-
-    textarea {
-        max-width: 100%;
-        width: 100%;
-        height: 120px;
-    }
-}
-.container {
-    max-width: 900px;
-    width: 100%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-*/
 @media (max-width: 600px) {
     .container {
         font-size: 12px;
@@ -227,28 +172,20 @@ input-container input {
         height: 120px;
     }
 
-    /* Új stílusok a label és textarea elrendezéséhez */
     .input-container {
         flex-direction: column;
-        /* A label és a textarea egymás alatt lesz */
         align-items: flex-start;
-        /* Balra igazítás */
         gap: 5px;
-        /* Kisebb távolság a label és a textarea között */
     }
 
     label {
         min-width: auto;
-        /* Ne legyen fix szélesség */
         margin-bottom: 5px;
-        /* Távolság a label és a textarea között */
     }
 
     textarea {
         min-width: 50px;
-        /* Teljes szélességű lesz */
         max-width: 100%;
-        /* Ne lógjon ki */
     }
 
     .logo {

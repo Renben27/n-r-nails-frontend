@@ -15,7 +15,6 @@ body {
     top: -60px;
     /* Felfelé mozgatja a szöveget */
     margin-bottom: 20px;
-    /* Csökkenti a szöveg alatti távolságot */
 }
 
 .just-another-hand-regular {
@@ -74,7 +73,6 @@ body {
 header {
     background-color: #886383;
     height: 100px;
-    /* vagy nagyobb, ha szükséges */
     padding: 0 20px;
     position: sticky;
     top: 0;
@@ -89,11 +87,8 @@ header {
 .profile-icon {
     position: absolute;
     top: 20px;
-    /* Felső távolság */
     right: 20px;
-    /* Jobb oldali távolság */
     font-size: 45px;
-    /* Ikon mérete */
     margin-top: 15px;
     cursor: pointer;
     
@@ -122,14 +117,11 @@ header nav a:hover {
     width: 90%;
     /* A vonal szélessége a navigációhoz igazítva */
     max-width: 10000px;
-    /* Maximális szélesség (ha a képernyőn nagyobb lenne a 70%) */
     border-bottom: 2px solid black;
-    /* Vonal vastagsága és színe */
     margin-top: 100px;
     position: absolute;
     justify-content: center;
     align-items: center;
-    /* Középre igazítja a vonalat, és távolságot ad a menüpontoktól */
 }
 
 .hero {
@@ -149,7 +141,6 @@ header nav a:hover {
     width: 100%;
     height: 100%;
     background-image: url('/images/szalon4.jpg');
-    /* Háttérkép helye */
     background-size: cover;
     background-position: center;
     opacity: 0.3;
@@ -199,7 +190,7 @@ footer {
     padding: 10px 20px;
     margin-top: 20px;
     border-top: none;
-    /* Ha a lábléc okoz egy felső vonalat */
+    /* Mert a lábléc okoz egy felső vonalat */
 }
 
 footer p {
@@ -234,14 +225,12 @@ strong {
 
 .contact-item img {
     width: 24px;
-    /* Ikon mérete */
     height: 24px;
 }
 
 .contact-item span {
     font-size: 16px;
     color: #000;
-    /* Szöveg színe */
 }
 
 .contact-section span {
@@ -367,7 +356,6 @@ strong {
     z-index: 1000 !important;
 }
 
-/* Ensure nav is hidden by default on mobile */
 @media screen and (max-width: 810px) {
    
 
@@ -375,7 +363,6 @@ strong {
         flex-direction: column;
         text-align: center;
         font-size: 0.9rem;
-        /* Csökkentett betűméret */
     }
 
     .profile-icon {
@@ -386,13 +373,9 @@ strong {
         position: absolute;
         bottom: 0px;
         width: 90%;
-        /* A vonal szélessége a navigációhoz igazítva */
         max-width: 10000px;
-        /* Maximális szélesség (ha a képernyőn nagyobb lenne a 70%) */
         border-bottom: 2px solid black;
-        /* Vonal vastagsága és színe */
         margin: 0 auto;
-        /* Középre igazítja a vonalat, és távolságot ad a menüpontoktól */
     }
 
     nav {
@@ -402,10 +385,8 @@ strong {
         justify-content: center !important;
         align-items: center;
         background-color: #c7a1bf;
-        /* Match the header background color */
         position: absolute;
         top: 100%;
-        /* Position below the header */
         left: 0;
         width: 100vw;
         gap: 0px !important;
@@ -422,7 +403,6 @@ strong {
     .hamburger-menu {
         display: flex;
         background-color: transparent;
-        /* Remove white background */
     }
 
     nav a {

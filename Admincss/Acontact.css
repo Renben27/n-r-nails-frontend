@@ -12,11 +12,9 @@ body {
     height: 100vh;
     margin: 0;
     background-image: url('/images/hatter18.jfif');
-    /*Itt cseréld ki az elérési útra */
     background-size: cover;
     /* A kép kitölti az egész hátteret */
     background-position: center;
-    /* A kép középre lesz igazítva */
     background-repeat: no-repeat;
     /* Nem ismétlődik a kép */
 }
@@ -52,25 +50,25 @@ header {
 .profile-icon {
     width: 80px; /* A kör átmérője */
     height: 80px;
-    background-color: #886383; /* Háttérszín */
-    border-radius: 50%; /* Kör alak */
+    background-color: #886383;
+    border-radius: 50%; 
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     margin-top: 23px;
     margin-right: 30px;
+    transition: ease 500ms;
 }
 
 .profile-icon i {
     display: flex;
     font-size: 50px;
-    transition: ease 500ms;
     object-fit: cover;
 }
 
 .profile-icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .logo img {
@@ -157,7 +155,7 @@ footer {
     padding: 14px 10px;
     margin-top: 100px;
     border-top: none;
-    /* Ha a lábléc okoz egy felső vonalat */
+    /*Mert a lábléc okoz egy felső vonalat */
 }
 
 .footer a {
@@ -169,7 +167,7 @@ footer {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 810px) {
     .container{
         max-width: 300px;
         font-size: small;
@@ -180,6 +178,18 @@ footer {
     }
     .form{
         font-size: small;
+    }
+    .profile-icon i{
+        font-size: 35px;
+        
+    }
+    .profile-icon{
+        width: 60px;
+        height: 60px;
+    }
+    .logo img {
+        height: 70px;
+        width: 70px;
     }
 }
 @media screen and (max-width: 400px) {
@@ -194,5 +204,9 @@ footer {
     .form{
         font-size: smaller;
     }
+    .h1k{
+        font-size: 0.7rem;
+    }
 }
+
 /*admin*/

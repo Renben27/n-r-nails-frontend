@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ebc6eb;
-    font-size: 20px;
 }
 
 header {
@@ -15,6 +14,7 @@ header {
     left: 0;
     z-index: 1000;
     position: sticky;
+    height: 70px;
 }
 
 .kalam-regular {
@@ -60,15 +60,6 @@ header {
     height: 110px;
     border-radius: 50%;
 }
-
-
-
-
-
-
-
-
-
 
 .gallery {
     display: grid;
@@ -126,15 +117,6 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-
 .modal {
     display: none;
     position: fixed;
@@ -182,7 +164,7 @@ footer {
     padding: 10px 20px;
     margin-top: 20px;
     border-top: none;
-    /* Ha a lábléc okoz egy felső vonalat */
+    /* Mert a lábléc okoz egy felső vonalat */
 }
 
 footer p {
@@ -207,14 +189,12 @@ footer p {
 
 .contact-item img {
     width: 24px;
-    /* Ikon mérete */
     height: 24px;
 }
 
 .contact-item span {
     font-size: 16px;
     color: #000;
-    /* Szöveg színe */
 }
 
 .contact-section span {
@@ -227,21 +207,28 @@ footer p {
     font-style: normal;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
     body {
         font-size: 0.9rem;
     }
 
     .contact-section {
+        flex-direction: column;
+        text-align: center;
         font-size: 0.9rem;
     }
-
-    .profile-icon {
-        font-size: 45px;
+    footer p{
+        font-size: 0.9rem;
     }
-
+    header h1{
+        font-size: 1.5rem;
+    }
+    .profile-icon i{
+        font-size: 35px;
+    }
     .logo img {
-        font-size: 45px;
+        height: 70px;
+        width: 70px;
     }
     .modal-content img{
         max-width: 270px;
