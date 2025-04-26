@@ -1,5 +1,4 @@
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { 
     const calendarBody = document.getElementById("calendar-body");
     const monthYear = document.getElementById("month-year");
     const prevMonth = document.getElementById("prev-month");
@@ -50,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    //lefoglalás elküldése, feljövő ablak//
+    // Lefoglalás elküldése, feljövő ablak//
     prevMonth.addEventListener("click", () => {
         currentDate.setMonth(currentDate.getMonth() - 1);
         renderCalendar();
@@ -65,72 +64,64 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const selectedDate = appointmentDate.value;
         const selectedTime = document.getElementById("appointment-time").value;
-        if (res.ok) {
+        const selectedService = document.querySelector('input[name="service"]:checked').value;
 
-        }
-        alert(`Sikeres foglalás! ${selectedDate}  ${selectedTime}`);
-        bookingForm.style.display = "none";
-    });
-
-    renderCalendar();
-});
-/*
-Swal.fire({
-    title: "Custom width, padding, color, background.",
-    width: 600,
-    padding: "3em",
-    color: "#716add",
-    background: "#fff url(/images/trees.png)",
-    backdrop: `
-      rgba(0,0,123,0.4)
-      url("/images/nyan-cat.gif")
-      left top
-      no-repeat
-    `
-  });*/
-  appointmentForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const selectedDate = appointmentDate.value;
-    const selectedTime = document.getElementById("appointment-time").value;
-    const selectedService = document.querySelector('input[name="service"]:checked').value;
-
-    fetch('/api/booking', {
-        method: 'POST',
-        credentials: 'include',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            felhasznalo_id: userId,  // Győződj meg róla, hogy a felhasználó ID-ját is küldöd
-            datum: `${selectedDate} ${selectedTime}`,  // Dátum és idő formátuma
-            szolgaltatas_id: selectedService
+        fetch('/api/booking', {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                felhasznalo_id: userId,  // Győződj meg róla, hogy a felhasználó ID-ját is küldöd
+                datum: `${selectedDate} ${selectedTime}`,  // Dátum és idő formátuma
+                szolgaltatas_id: selectedService
+            })
         })
-    })
-    .then(response => {
-        console.log('Response:', response);  // A válasz naplózása
-        if (response.ok) {
+        .then(response => {
+            console.log('Response:', response);  // A válasz naplózása
+            if (response.ok) {
+                // Ha a válasz sikeres, jelenjen meg a sikeres foglalás üzenet
+                Swal.fire({
+                    title: 'Sikeres foglalás!',
+                    text: `Időpont: ${selectedDate} ${selectedTime}, Szolgáltatás: ${selectedService}`,
+                    icon: 'success',
+                    confirmButtonText: 'Rendben',
+                    width: 600,
+                    padding: '3em',
+                    color: '#716add',
+                    background: '#fff url(/images/trees.png)', // Tetszés szerint cserélheted
+                    backdrop: `
+                        rgba(0,0,123,0.4)
+                        url("/images/nyan-cat.gif")  // Nyan Cat gif a háttérben
+                        left top
+                        no-repeat
+                    `
+                }).then(() => {
+                    // Ha a felhasználó rákattint a "Rendben"-ra, zárd be a foglalási formot
+                    bookingForm.style.display = "none";
+                });
+            } else {
+                // Ha a válasz nem sikeres, jelenjen meg a hibaüzenet
+                Swal.fire({
+                    title: 'Hiba történt!',
+                    text: 'A foglalás nem sikerült.',
+                    icon: 'error',
+                    confirmButtonText: 'Ok'
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Hiba történt:', error);  // Ha van hiba, naplózd
             Swal.fire({
-                title: 'Sikeres foglalás!',
-                text: `Időpont: ${selectedDate} ${selectedTime}, Szolgáltatás: ${selectedService}`,
-                icon: 'success',
+                title: 'Hiba!',
+                text: 'A foglalás nem sikerült. Kérlek próbáld újra!',
+                icon: 'error',
                 confirmButtonText: 'Rendben'
             });
-        } else {
-            Swal.fire({
-                title: 'Hiba történt!',
-                text: 'A foglalás nem sikerült.',
-                icon: 'error',
-                confirmButtonText: 'Ok'
-            });
-        }
-    })
-    .catch(error => {
-        console.error('Hiba történt:', error);  // Ha van hiba, naplózd
-        Swal.fire({
-            title: 'Hiba!',
-            text: 'A foglalás nem sikerült. Kérlek próbáld újra!',
-            icon: 'error',
-            confirmButtonText: 'Rendben'
         });
     });
+
+    // Naptár renderelés
+    renderCalendar();
 });
