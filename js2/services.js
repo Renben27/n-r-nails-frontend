@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('/api/services')
         .then(response => response.json())
         .then(data => {
-            var container = document.querySelector('.container-card');
+            var container = document.querySelector('.cards-container');
             var categories = {};
 
             data.forEach(function (item) {
