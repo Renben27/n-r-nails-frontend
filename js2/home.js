@@ -81,3 +81,40 @@ prevBtn.addEventListener("click", () => {
 // Indítás oldalbetöltéskor
 startAutoScroll();
 
+
+// Vélemények betöltése az API-ról
+function loadOpinions(offset = 0) {
+    fetch(`/api/getopinions?offset=${offset}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Hiba a vélemények lekérdezésekor.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            wrapper.innerHTML = ''; // Töröljük az előző véleményeket
+
+            data.forEach(review => {
+                const box = document.createElement('div');
+                box.classList.add('review-box');
+                box.innerHTML = `
+                    <strong>${review.nev}</strong><br>
+                    <small>${new Date(review.datum).toLocaleDateString('hu-HU')}</small><br>
+                    "${review.velemeny}"
+                `;
+                wrapper.appendChild(box);
+            });
+
+            // Reset scroll pozíció
+            scrollAmount = 0;
+            wrapper.style.transform = `translateX(0px)`;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+}
+
+// Oldal betöltésekor vélemények betöltése
+document.addEventListener('DOMContentLoaded', () => {
+    loadOpinions();
+});
