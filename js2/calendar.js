@@ -88,3 +88,75 @@ Swal.fire({
       no-repeat
     `
   });*/
+  appointmentForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const selectedDate = appointmentDate.value;
+    const selectedTime = document.getElementById("appointment-time").value;
+    const selectedService = document.querySelector('input[name="service"]:checked');
+
+    if (!selectedService) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Hiba!',
+            text: 'Válassz ki egy szolgáltatást!'
+        });
+        return;
+    }
+
+    if (!selectedDate || !selectedTime) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Hiba!',
+            text: 'Kérlek válassz ki egy dátumot és időpontot!'
+        });
+        return;
+    }
+
+    const datum = `${selectedDate} ${selectedTime}`;
+    const szolgaltatas_id = selectedService.value; 
+
+    try {
+        const res = await fetch('/api/booking', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include', // Nagyon fontos ha Cookie Token van!
+            body: JSON.stringify({ datum, szolgaltatas_id })
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+            Swal.fire({
+                title: "Foglalás sikeres! 🎉",
+                width: 600,
+                padding: "3em",
+                color: "#716add",
+                background: "#fff url(/images/trees.png)",
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url("/images/nyan-cat.gif")
+                    left top
+                    no-repeat
+                `
+            });
+            bookingForm.style.display = "none";
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Hiba!',
+                text: data.error || 'Valami hiba történt a foglalásnál!'
+            });
+        }
+
+    } catch (error) {
+        console.error('Hálózati hiba:', error);
+        Swal.fire({
+            icon: 'error',
+            title: 'Hálózati hiba!',
+            text: 'Nem sikerült kapcsolódni a szerverhez!'
+        });
+    }
+});
