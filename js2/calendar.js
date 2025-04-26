@@ -96,6 +96,7 @@ Swal.fire({
 
     fetch('/api/booking', {
         method: 'POST',
+        credentials: 'include',
         headers: {
             'Content-Type': 'application/json'
         },
