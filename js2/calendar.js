@@ -9,29 +9,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const bookingForm = document.querySelector(".booking-form");
 
     let currentDate = new Date();
-    
-//naptár megjelenítése, napok kiválasztása//
+
+    //naptár megjelenítése, napok kiválasztása//
     function renderCalendar() {
         const currentYear = currentDate.getFullYear();
         const currentMonth = currentDate.getMonth();
         const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
         const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-    
+
         monthYear.textContent = `${currentDate.toLocaleString("default", { month: "long" })} ${currentYear}`;
         calendarBody.innerHTML = "";
-    
+
         let date = 1;
         for (let i = 0; i < 6; i++) {
             const row = document.createElement("tr");
-    
+
             for (let j = 0; j < 7; j++) {
                 const cell = document.createElement("td");
-    
+
                 if ((i === 0 && j < firstDayOfMonth) || date > daysInMonth) {
                     cell.textContent = "";
                 } else {
                     cell.textContent = date;
-    
+
                     // Esemény hozzáadása a dátum cellához
                     cell.addEventListener("click", ((selectedDate) => {
                         return () => {
@@ -39,13 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
                             appointmentDate.value = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(selectedDate).padStart(2, "0")}`;
                         };
                     })(date)); // IIFE használata a dátum megőrzésére
-    
+
                     date++;
                 }
-    
+
                 row.appendChild(cell);
             }
-    
+
             calendarBody.appendChild(row);
         }
     };
@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const selectedDate = appointmentDate.value;
         const selectedTime = document.getElementById("appointment-time").value;
-      if (res.ok) {
-        
-      }
+        if (res.ok) {
+
+        }
         alert(`Sikeres foglalás! ${selectedDate}  ${selectedTime}`);
         bookingForm.style.display = "none";
     });
@@ -88,7 +88,8 @@ Swal.fire({
       no-repeat
     `
   });*/
-  appointmentForm.addEventListener("submit", async (e) => {
+import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/+esm';
+appointmentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const selectedDate = appointmentDate.value;
@@ -114,7 +115,18 @@ Swal.fire({
     }
 
     const datum = `${selectedDate} ${selectedTime}`;
-    const szolgaltatas_id = selectedService.value; 
+    const szolgaltatas_id = selectedService.value;
+
+    // Töltő animáció (SweetAlert megjelenítése)
+    Swal.fire({
+        title: 'Foglalás folyamatban...',
+        text: 'Kérem várjon...',
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        willOpen: () => {
+            Swal.showLoading();
+        }
+    });
 
     try {
         const res = await fetch('/api/booking', {
@@ -122,13 +134,14 @@ Swal.fire({
             headers: {
                 'Content-Type': 'application/json'
             },
-            credentials: 'include', // Nagyon fontos ha Cookie Token van!
+            credentials: 'include', // Ha cookie van
             body: JSON.stringify({ datum, szolgaltatas_id })
         });
 
         const data = await res.json();
 
         if (res.ok) {
+            // Sikeres foglalás után a SweetAlert animációval
             Swal.fire({
                 title: "Foglalás sikeres! 🎉",
                 width: 600,
@@ -144,6 +157,7 @@ Swal.fire({
             });
             bookingForm.style.display = "none";
         } else {
+            // Hibás foglalás
             Swal.fire({
                 icon: 'error',
                 title: 'Hiba!',
