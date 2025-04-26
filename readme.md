@@ -22,7 +22,7 @@ Az N&R Nails weboldal frontendje a felhasználói felület kialakításáért é
 ![image](https://github.com/user-attachments/assets/6ea7b6a5-c8eb-4c1b-bc29-35431ca0a65e)
 
 - **Munkáink** - A munkák képes bemutatása:
-
+![image](https://github.com/user-attachments/assets/8378b896-1c7c-460e-ac83-2cb626be30fe)
 
 - **Rólunk** - Bemutatja a szalonunkat:
 ![image](https://github.com/user-attachments/assets/22b29ec4-a7bc-4e59-8238-923214b38b2b)
@@ -149,8 +149,6 @@ N-R-NAILS-FRONTEND/
 
 
 
-
-
 ---
 ## ⌚Jövőbeli fejlesztések
 - Egy interaktív „tervezd meg a körmöd” modul, ahol a vendégek online kiválaszthatják és kombinálhatják a színeket, formákat, díszítéseket (pl. strassz, ombre, minta), majd elmenthetik vagy elküldhetik időpontfoglaláskor a körmösnek.
@@ -161,9 +159,11 @@ N-R-NAILS-FRONTEND/
 ## Az oldalon használt hivatkozások
 - [Netlify](https://app.netlify.com)
 - [Github](https://github.com)
-- [Github](https://github.com)
 - [ChatGPT](https://chatgpt.com)
 - [DeepSeek](https://deepseak.ai)
+- [SweetAlert](https://sweetalert2.github.io/)
+- [Code Icon](https://fontawesome.com/icons/code?s=solid)
+- [Google Font](https://fonts.google.com/)
 
 
 
