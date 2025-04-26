@@ -3,15 +3,15 @@ const nailsLogo = document.getElementsByClassName('nailslogo')[0];
 const iconDate = document.getElementsByClassName('fixed')[0];
 
 profileIcon.addEventListener('click', () => {
-    window.location.href = ('./Apersonaldata.html');
+    window.location.href = ('./Adminhtml/Apersonaldata.html');
 });
 
 nailsLogo.addEventListener('click', () => {
-    window.location.href = ('../Ahome.html');
+    window.location.href = ('../Adminhtml/Ahome.html');
 });
 
 iconDate.addEventListener('click', () => {
-    window.location.href = './Aservices.html';
+    window.location.href = './Adminhtml/Aservices.html';
 });
 
 

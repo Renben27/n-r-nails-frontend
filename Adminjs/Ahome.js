@@ -7,27 +7,27 @@ const iconDate = document.getElementsByClassName('fixed')[0];
 
 
 servicesbutton.addEventListener('click', () => {
-    window.location.href = './Aservices.html';
+    window.location.href = './Adminhtml/Aservices.html';
 });
 
 workbutton.addEventListener('click', () => {
-    window.location.href = './Aourworks.html';
+    window.location.href = './Adminhtml/Aourworks.html';
 });
 
 aboutusbutton.addEventListener('click', () => {
-    window.location.href = ('./Aaboutus.html');
+    window.location.href = ('./Adminhtml/Aaboutus.html');
 });
 
 contactbutton.addEventListener('click', () => {
-    window.location.href = ('./Acontact.html');
+    window.location.href = ('./Adminhtml/Acontact.html');
 });
 
 profileIcon.addEventListener('click', () => {
-    window.location.href = ('./Apersonaldata.html');
+    window.location.href = ('./Adminhtml/Apersonaldata.html');
 });
 
 iconDate.addEventListener('click', () => {
-    window.location.href = './Aservices.html';
+    window.location.href = './Adminhtml/Aservices.html';
 });
 
 

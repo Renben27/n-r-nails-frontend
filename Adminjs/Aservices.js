@@ -8,34 +8,34 @@ const booking5 = document.getElementById('specials-button');
 const booking6 = document.getElementById('weddingm-button');
 
 profileIcon.addEventListener('click', () => {
-    window.location.href = ('./Apersonaldata.html');
+    window.location.href = ('./Adminhtml/Apersonaldata.html');
 });
 
 nailsLogo.addEventListener('click', () => {
-    window.location.href = ('../Ahome.html');
+    window.location.href = ('./Adminhtml/Ahome.html');
 });
 
 booking.addEventListener('click', () => {
-    window.location.href = ('../Aservices1.html');
+    window.location.href = ('../Adminhtml/Aservices1.html');
 });
 
 booking2.addEventListener('click', () => {
-    window.location.href = ('../Aservices2.html');
+    window.location.href = ('../Adminhtml/Aservices2.html');
 });
 
 booking3.addEventListener('click', () => {
-    window.location.href = ('../Aservices3.html');
+    window.location.href = ('../Adminhtml/Aservices3.html');
 });
 
 booking4.addEventListener('click', () => {
-    window.location.href = ('../Aservices4.html');
+    window.location.href = ('../Adminhtml/Aservices4.html');
 });
 
 booking5.addEventListener('click', () => {
-    window.location.href = ('../Aservices5.html');
+    window.location.href = ('../Adminhtml/Aservices5.html');
 });
 
 booking6.addEventListener('click', () => {
-    window.location.href = ('../Aservices6.html');
+    window.location.href = ('../Adminhtml/Aservices6.html');
 });
 //admin
