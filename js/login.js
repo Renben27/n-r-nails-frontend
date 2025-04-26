@@ -25,7 +25,7 @@ async function login() {
     if (res.ok) {
         if (data.isAdmin === 1) {
             alert(data.message)
-            window.location.href = './Ahome.html';
+            window.location.href = './Adminhtml/Ahome.html';
         } else {
             alert(data.message);
             window.location.href = './home.html';
