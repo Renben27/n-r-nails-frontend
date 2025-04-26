@@ -11,23 +11,23 @@ servicesbutton.addEventListener('click', () => {
 });
 
 workbutton.addEventListener('click', () => {
-    window.location.href = './Adminhtml/Aourworks.html';
+    window.location.href = './Aourworks.html';
 });
 
 aboutusbutton.addEventListener('click', () => {
-    window.location.href = ('./Adminhtml/Aaboutus.html');
+    window.location.href = ('./Aaboutus.html');
 });
 
 contactbutton.addEventListener('click', () => {
-    window.location.href = ('./Adminhtml/Acontact.html');
+    window.location.href = ('./Acontact.html');
 });
 
 profileIcon.addEventListener('click', () => {
-    window.location.href = ('./Adminhtml/Apersonaldata.html');
+    window.location.href = ('./Apersonaldata.html');
 });
 
 iconDate.addEventListener('click', () => {
-    window.location.href = './Adminhtml/Aservices.html';
+    window.location.href = './Aservices.html';
 });
 
 
