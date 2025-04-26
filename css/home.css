@@ -132,11 +132,6 @@ header nav a:hover {
     /* Középre igazítja a vonalat, és távolságot ad a menüpontoktól */
 }
 
-* {
-    border: none;
-    /* Globális szintű border-eltávolítás, ha más elem is okozza */
-}
-
 .hero {
     position: relative;
     text-align: center;
@@ -484,5 +479,14 @@ strong {
         align-items: center;
         text-align: center;
         left: 2.2%;
+    }
+}
+@media screen and (min-width: 1500px) {
+    #nextBtn {
+        margin-right: 150px;
+    }
+
+    #prevBtn {
+        margin-left: 150px;
     }
 }

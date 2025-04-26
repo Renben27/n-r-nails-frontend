@@ -115,13 +115,6 @@ h1 {
     margin: 10px 0;
 }
 
-.subheading {
-    font-size: 18px;
-    text-align: center;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
 .content {
     max-width: 800px;
     margin: 0 auto;
@@ -257,9 +250,9 @@ footer {
     /* Finom mozgás */
 }
 
-.review-box {
+.reviews-box {
     min-width: 250px;
-    max-width: 450px;
+    max-width: 400px;
     min-height: 150px;
     max-height: 200px;
     padding: 15px;
@@ -269,7 +262,20 @@ footer {
     overflow-wrap: break-word;
     white-space: normal;
 }
-
+.name{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    font-weight: 800;
+    font-size: 20px;
+}
+.date{
+    justify-content: end;
+    align-items: flex-end;
+    text-align: end;
+    color: grey;
+}
+.opinions{
+    overflow-wrap: break-word;
+}
 #nextBtn {
     background-color: #c99ec2;
     font-size: 20px;
@@ -291,7 +297,6 @@ footer {
     margin: 2px;
     z-index: 1000 !important;
 }
-
 @media screen and (min-width: 1500px) {
     #nextBtn {
         margin-right: 150px;
