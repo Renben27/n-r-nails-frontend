@@ -100,7 +100,7 @@ p {
     color: #333;
 }
 
-#pedikur-button, #gellak-button, #extram-button, #mbuild-button, #specials-button, #weddingm-button{
+.services-button{
     margin-top: 20px;
     padding: 10px 20px;
     border: none;
@@ -112,7 +112,7 @@ p {
     transition: background-color 0.3s;
 }
 
-#pedikur-button:hover, #gellak-button:hover, #extram-button:hover, #mbuild-button:hover, #specials-button:hover , #weddingm-button:hover {
+.services-button:hover {
     background-color: #333030;
 }
 
