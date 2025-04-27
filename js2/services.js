@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
           card.classList.add('card');
   
           const image = document.createElement('img');
-          image.src = `/images/${category.kep}`;
+          image.src = `/uploads/${category.kep}`;
           image.alt = category.nev;
           image.classList.add('card-image');
   
