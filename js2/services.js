@@ -15,79 +15,54 @@ nailsLogo.addEventListener('click', () => {
     window.location.href = ('../home.html');
 });
 
-document.addEventListener('click', function (event) {
-    if (event.target && event.target.id === buttonId) {
-        window.location.href = '../services1.html?category=' + kategoria_id;
-    }
-});
 
-booking2.addEventListener('click', () => {
-    window.location.href = ('../services2.html');
-});
-
-booking3.addEventListener('click', () => {
-    window.location.href = ('../services3.html');
-});
-
-booking4.addEventListener('click', () => {
-    window.location.href = ('../services4.html');
-});
-
-booking5.addEventListener('click', () => {
-    window.location.href = ('../services5.html');
-});
-
-booking6.addEventListener('click', () => {
-    window.location.href = ('../services6.html');
-});
-
-// Lekéri a kategóriákat az API-ból és kirajzolja a kártyákat
 document.addEventListener('DOMContentLoaded', () => {
-    fetchCategoriesAndServices();
-});
-
-function fetchCategoriesAndServices() {
-    fetch('/api/categories-with-services') // EZ az endpoint hívódik meg
-        .then(response => response.json())
-        .then(data => {
-            if (!data || !Array.isArray(data)) {
-                console.error('Hibás adatok:', data);
-                return;
-            }
-            renderCategories(data);
-        })
-        .catch(err => {
-            console.error('Hiba az adatok lekérésekor:', err);
+    fetch('/api/categories-with-services')
+      .then(response => response.json())
+      .then(categories => {
+        const cardsContainer = document.querySelector('.cards-container');
+  
+        categories.forEach(category => {
+          const card = document.createElement('div');
+          card.classList.add('card');
+  
+          const image = document.createElement('img');
+          image.src = `/images/${category.kep}`;
+          image.alt = category.nev;
+          image.classList.add('card-image');
+  
+          const content = document.createElement('div');
+          content.classList.add('card-content');
+  
+          const title = document.createElement('h1');
+          title.classList.add('card-title');
+          title.textContent = category.nev;
+  
+          // Ide jönnek a szolgáltatások
+          category.szolgaltatasok.forEach(service => {
+            const p = document.createElement('p');
+            p.textContent = `${service.nev}: ${service.ar}`;
+            content.appendChild(p);
+          });
+  
+          const button = document.createElement('button');
+          button.id = `category-${category.kategoria_id}`;
+          button.textContent = 'Időpont foglalás';
+  
+          button.addEventListener('click', () => {
+            window.location.href = `/services1.html?kategoria_id=${category.kategoria_id}`;
+          });
+  
+          content.appendChild(button);
+  
+          card.appendChild(image);
+          card.appendChild(content);
+  
+          cardsContainer.appendChild(card);
         });
-}
-
-function renderCategories(categories) {
-    const container = document.querySelector('.cards-container');
-    container.innerHTML = ''; // ürítjük előtte
-
-    categories.forEach(category => {
-        const card = document.createElement('div');
-        card.classList.add('card');
-
-        // A card belseje
-        card.innerHTML = `
-        <img src="uploads/${category.kep}" alt="${category.nev}" class="card-image">
-        <div class="card-content">
-          <h1 class="card-title">${category.nev}</h1>
-          ${category.szolgaltatasok.map(service => `
-            <p>${service.nev}: ${service.ar}</p>
-          `).join('')}
-          <button id="button-${category.kategoria_id}">Időpont foglalás</button>
-        </div>
-      `;
-
-        container.appendChild(card);
-
-        // Gomb eseménykezelő hozzáadása
-        const button = document.getElementById(`button-${category.kategoria_id}`);
-        button.addEventListener('click', () => {
-            window.location.href = `services1.html?category=${category.kategoria_id}`;
-        });
-    });
-}
-
+      })
+      .catch(error => {
+        console.error('Hiba a kategóriák betöltésekor:', error);
+      });
+  });
+  
