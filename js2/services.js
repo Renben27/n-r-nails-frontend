@@ -47,10 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
           const button = document.createElement('button');
           button.id = `category-${category.kategoria_id}`;
+          button.classList.add(`services-button`);
           button.textContent = 'Időpont foglalás';
   
           button.addEventListener('click', () => {
-            window.location.href = `/services1.html?kategoria_id=${category.kategoria_id}`;
+            window.location.href = `/services${category.kategoria_id}.html?kategoria_id=${category.kategoria_id}`;
           });
   
           content.appendChild(button);
