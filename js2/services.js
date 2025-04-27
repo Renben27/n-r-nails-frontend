@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const title = document.createElement('h1');
           title.classList.add('card-title');
           title.textContent = category.nev;
+          content.appendChild(title); 
   
           // Ide jönnek a szolgáltatások
           category.szolgaltatasok.forEach(service => {
