@@ -13,9 +13,66 @@ nailsLogo.addEventListener('click', () => {
 arrow.addEventListener('click', () => {
     window.location.href = ('./services.html');
 });
-// services1.js
+
 
 // Segédfüggvény az URL paraméter kinyerésére
+function getCategoryIdFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('kategoria_id');
+}
+
+document.addEventListener('DOMContentLoaded', loadCategoryData);
+
+async function loadCategoryData() {
+    const categoryId = getCategoryIdFromURL();
+    if (!categoryId) {
+        console.error('Hiányzó kategória ID az URL-ben');
+        return;
+    }
+
+    try {
+        const response = await fetch(`/api/category/${categoryId}`);
+        const data = await response.json();
+
+        if (!data || !data.nev || !data.kep || !data.szolgaltatasok) {
+            console.error('Hiányos adatok érkeztek');
+            return;
+        }
+
+        const container = document.querySelector('.container');
+        container.innerHTML = ''; // Ürítjük a container-t, hogy friss legyen.
+
+        let szolgaltatasokHTML = '';
+
+        data.szolgaltatasok.forEach(service => {
+            szolgaltatasokHTML += `
+                <label>
+                    <input type="radio" name="service" value="${service.szolgaltatas_id}">
+                    ${service.nev} - ${service.ar} Ft
+                </label><br>
+            `;
+        });
+
+        container.innerHTML = `
+            <div class="card">
+                <img src="/uploads/${data.kep}" alt="${data.nev}" class="card-image">
+
+                <div class="card-content">
+                    <h1 class="card-title">${data.nev}</h1>
+
+                    <form id="services-form">
+                        ${szolgaltatasokHTML}
+                    </form>
+                </div>
+            </div>
+        `;
+
+    } catch (err) {
+        console.error('Hiba az adatok betöltésekor:', err);
+    }
+}
+
+/*// Segédfüggvény az URL paraméter kinyerésére
 function getCategoryIdFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get('kategoria_id');
@@ -32,7 +89,7 @@ async function loadCategoryData() {
         const response = await fetch(`/api/category/${categoryId}`);
         const data = await response.json();
 
-        if (!data || !data.kategoriak || !data.szolgaltatasok) {
+        if (!data || !data.category || !data.szolgaltatasok) {
             console.error('Hiányos adatok érkeztek');
             return;
         }
@@ -45,8 +102,8 @@ async function loadCategoryData() {
 
         // Kép
         const image = document.createElement('img');
-        image.src = `/uploads/${data.kategoriak.kep}`;
-        image.alt = data.kategoriak.nev;
+        image.src = `/uploads/${data.kep}`;
+        image.alt = data.nev;
         image.classList.add('card-image');
         card.appendChild(image);
 
@@ -56,7 +113,7 @@ async function loadCategoryData() {
 
         const title = document.createElement('h1');
         title.classList.add('card-title');
-        title.textContent = data.kategoriak.nev;
+        title.textContent = data.nev;
         content.appendChild(title);
 
         // Szolgáltatások listája (rádiógombok)
@@ -90,7 +147,7 @@ async function loadCategoryData() {
         console.error('Hiba az adatok betöltésekor:', err);
     }
 }
-
+*/
 /*// Indítás oldalbetöltéskor
 
 document.addEventListener('DOMContentLoaded', () => {
