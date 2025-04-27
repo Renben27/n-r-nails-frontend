@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
           const button = document.createElement('button');
           button.id = `category-${category.kategoria_id}`;
-          button.classList.add(`services-button`);
+          button.classList.add(`card-button`);
           button.textContent = 'Időpont foglalás';
   
           button.addEventListener('click', () => {
