@@ -20,7 +20,7 @@ function getCategoryIdFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get('kategoria_id');
 }
-
+document.addEventListener('DOMContentLoaded', loadCategoryData);
 async function loadCategoryData() {
     const categoryId = getCategoryIdFromURL();
     if (!categoryId) {
@@ -92,7 +92,7 @@ async function loadCategoryData() {
 }
 
 /*// Indítás oldalbetöltéskor
-document.addEventListener('DOMContentLoaded', loadCategoryData);
+
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const kategoriaId = urlParams.get('kategoria_id');
