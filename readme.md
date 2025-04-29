@@ -1,7 +1,6 @@
 # N&R Nails Frontend Dokumentáció
 ## 💅🏻A projektről
 Az N&R Nails weboldal frontendje a felhasználói felület kialakításáért és a látogatók interakcióinak kezeléséért felel. A cél egy könnyen kezelhető, modern megjelenésű weboldal biztosítása volt, amely bemutatja a szolgáltatásokat, valamint információval szolgál a vendégek számára.
-(A backendet itt találod)[https://github.com/Renben27/n-r-nails-backend]
 
 ---
 ## 🎀Készítette
@@ -38,6 +37,10 @@ Az N&R Nails weboldal frontendje a felhasználói felület kialakításáért é
 ```bash
 git clone https://github.com/felhasznalonev/repo-nev.git
 ```
+---
+
+## 👾Backend
+(Itt találod a backendet)[https://github.com/Renben27/n-r-nails-backend]
 
 ---
 ## 🧪Tesztelés
