@@ -143,6 +143,7 @@ N-R-NAILS-FRONTEND/
 ---
 ## 🎨Figma Terv
 - A projekt vizuális és funkcionális terve a Figma eszközzel készült, amely lehetővé tette számunkra a felhasználói felület interaktív megjelenítését.
+- [Itt megtekintheted az egészet](https://www.figma.com/design/egtUeA4TacasrtVcuc37Lo/vizsga?node-id=0-1&p=f&t=pwiRQGbfGGuYPc9K-0)
 ![image](https://github.com/user-attachments/assets/dfbb35d4-2240-479d-94ab-df2cb2f40186)
 ![image](https://github.com/user-attachments/assets/9efdfb61-0191-40a7-9c62-6e2d62452c70)
 ![image](https://github.com/user-attachments/assets/9a9f0bc8-8617-4f33-bf3b-f97f02776c1f)
