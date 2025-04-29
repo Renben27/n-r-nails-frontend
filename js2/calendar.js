@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         background: '#886383', // Tetszés szerint cserélheted
                         backdrop: `
                             rgba(0,0,123,0.4)
-                            url("../images/nyan-cat.gif")  // Nyan Cat gif a háttérben
+                            url("/images/nyan-cat.gif")  // Nyan Cat gif a háttérben
                             left top
                             no-repeat
                         `
