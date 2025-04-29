@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
             body: JSON.stringify(bookingData)
         })
             .then(response => {
+                console.log(response);
                 if (response.ok) {
                     // Ha a válasz sikeres, jelenjen meg a sikeres foglalás üzenet
                     Swal.fire({
