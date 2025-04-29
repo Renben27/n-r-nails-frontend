@@ -44,6 +44,14 @@ git clone https://github.com/felhasznalonev/repo-nev.git
 
 ---
 ## 🧪Tesztelés
+-- Felhasználó login:
+-- felhasznalo@gmail.com
+-- 123456
+
+-- Admin login:
+-- admin@gmail.com
+-- 123456
+
 
 - **Mobilon**:
 ![image](https://github.com/user-attachments/assets/a2d819aa-847c-48d1-a229-170ae1be4afc)
