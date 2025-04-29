@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     // Ha a válasz sikeres, jelenjen meg a sikeres foglalás üzenet
                     Swal.fire({
                         title: 'Sikeres foglalás!',
-                        text: `Időpont: ${selectedDate} ${selectedTime}, Szolgáltatás: ${selectedService}`,
+                        text: `Időpont: ${selectedDate} ${selectedTime}`,
                         icon: 'success',
                         confirmButtonText: 'Rendben',
                         width: 600,
