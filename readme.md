@@ -40,7 +40,7 @@ git clone https://github.com/felhasznalonev/repo-nev.git
 ---
 
 ## 👾Backend
-(Itt találod a backendet)[https://github.com/Renben27/n-r-nails-backend]
+[Itt találod a backendet](https://github.com/Renben27/n-r-nails-backend)
 
 ---
 ## 🧪Tesztelés
