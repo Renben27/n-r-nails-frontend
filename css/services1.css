@@ -20,12 +20,14 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .icons {
     display: flex;
     gap: 15px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .icons img {
@@ -250,12 +252,14 @@ footer p {
     right: 20px;
     font-size: 45px;
     margin-top: 23px;
+    cursor: pointer;
 }
 
 .back-arrow {
     position: absolute;
     top: 0px;
     margin-top: 23px;
+    cursor: pointer;
 }
 
 .header-icons {

@@ -54,7 +54,9 @@ header {
 .profile-icon:hover {
     transform: scale(1.1);
 }
-
+.logo{
+    cursor: pointer;
+}
 .logo img {
     width: 110px;
     height: 110px;
@@ -283,6 +285,7 @@ footer {
     float: right;
     margin: 2px;
     z-index: 1000;
+    cursor: pointer;
 }
 
 #prevBtn {
@@ -294,6 +297,7 @@ footer {
     float: left;
     margin: 2px;
     z-index: 1000 !important;
+    cursor: pointer;
 }
 @media screen and (min-width: 1500px) {
     #nextBtn {
