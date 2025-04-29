@@ -177,7 +177,7 @@ N-R-NAILS-FRONTEND/
 - [SweetAlert](https://sweetalert2.github.io/)
 - [Code Icon](https://fontawesome.com/icons/code?s=solid)
 - [Google Font](https://fonts.google.com/)
-
+- 👉[Itt megtekintheted az oldalt](https://nandrnails.netlify.app/)
 
 
 
