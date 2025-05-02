@@ -52,6 +52,8 @@ body {
     position: relative;
     display: inline-block;
     cursor: pointer;
+}
+.dropdown span {
     margin:auto;
     border: 3x solid black;
 }
