@@ -68,3 +68,25 @@ function deleted() {
     });
 }
 
+async function loadData() {
+    const res =await fetch ('/api/myBooking', {
+        method: 'GET',
+        credentials: 'include'
+    })
+    if (!res.ok) {
+        console.log("Hiba az API hívásban!");
+        return;
+    }
+
+    const data = await res.json();
+    console.log("Lekért profiladatok:", data); // Ellenőrzés
+    if (data) {
+        renderBookingtData(data);
+    }
+};
+function renderBookingtData(data) {
+    document.getElementById('date').value = data.datum || "";
+    document.getElementById('services').value = data.nev|| "";
+    document.getElementById('price').value = data.ar || "";
+
+}
