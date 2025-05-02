@@ -1,92 +1,98 @@
 import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/+esm';
-const deletebutton = document.getElementsByClassName('delete-btn')[0];
-const nailsLogo = document.getElementsByClassName('logo')[0];
-const logout = document.getElementsByClassName('logout')[0];
-const myData = document.getElementById('myData');
-const myOpinion = document.getElementById('myOpinion');
-nailsLogo.addEventListener('click', () => {
-    window.location.href = ('./home.html');
-});
-myData.addEventListener('click', () => {
-    window.location.href = ('./personaldata.html');
-});
-myOpinion.addEventListener('click', () => {
-    window.location.href = ('./opinion.html');
-});
-logout.addEventListener('click', async () => {
-    const res = await fetch('/api/logout', {
+
+const navigateTo = (url) => window.location.href = url;
+
+document.querySelector('.logo')?.addEventListener('click', () => navigateTo('./home.html'));
+document.getElementById('myData')?.addEventListener('click', () => navigateTo('./personaldata.html'));
+document.getElementById('myOpinion')?.addEventListener('click', () => navigateTo('./opinion.html'));
+
+document.querySelector('.logout')?.addEventListener('click', logoutUser);
+window.addEventListener('DOMContentLoaded', loadBookings);
+
+async function logoutUser() {
+    const response = await fetch('/api/logout', {
         method: 'POST',
-        credentials: 'include'
-    })
-
-    console.log(res);
-    
-    const data = await res.json();
-    console.log(data);
-    
-    if (res.ok) {
-        window.location.href = ('./index.html');
-    } else {
-        alert("hiba a kijelentkezéskor");
-    }
-});
-deletebutton.addEventListener('click', deleted);
-
-function deleted() {
-    const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-            confirmButton: "btn btn-success",
-            cancelButton: "btn btn-danger"
-        },
-        buttonsStyling: false
+        credentials: 'include',
     });
-    swalWithBootstrapButtons.fire({
+
+    if (response.ok) {
+        navigateTo('./index.html');
+    } else {
+        alert("Hiba a kijelentkezéskor");
+    }
+}
+
+async function loadBookings() {
+    const response = await fetch('/api/myBooking', {
+        method: 'GET',
+        credentials: 'include',
+    });
+
+    if (!response.ok) return;
+
+    const bookings = await response.json();
+    displayBookings(bookings);
+}
+
+function displayBookings(bookings) {
+    const container = document.querySelector('.bookings');
+    container.innerHTML = '';
+
+    bookings.forEach(({ datum, szolgaltatas_nev, ar, foglalas_id }) => {
+        const element = document.createElement('div');
+        element.className = 'dropdown';
+        element.innerHTML = `
+            <span class="date">${formatDate(datum)}</span>
+            <div class="dropdown-content">
+                <p class="services">Szolgáltatás: ${szolgaltatas_nev}</p>
+                <p class="price">Ár: ${ar} Ft</p>
+                <button class="delete-btn" data-id="${foglalas_id}">Lemondás</button>
+            </div>
+        `;
+        container.appendChild(element);
+    });
+
+    document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', () => confirmDelete(button.dataset.id));
+    });
+}
+
+function formatDate(isoString) {
+    return new Date(isoString).toLocaleDateString('hu-HU');
+}
+
+function confirmDelete(foglalasId) {
+    Swal.fire({
         title: "Biztos vagy benne?",
         text: "Nem tudod visszaállítani!",
         icon: "warning",
         showCancelButton: true,
         confirmButtonText: "Igen, törlöm!",
         cancelButtonText: "Mégsem!",
-        reverseButtons: true
-    }).then((result) => {
+        reverseButtons: true,
+        customClass: {
+            confirmButton: "btn btn-success",
+            cancelButton: "btn btn-danger"
+        },
+        buttonsStyling: false
+    }).then(async (result) => {
         if (result.isConfirmed) {
-            swalWithBootstrapButtons.fire({
-                title: "Törölve!",
-                text: "Foglalás törölve!",
-                icon: "success"
-            });
-        } else if (
-             /*Read more about handling dismissals below*/ 
-            result.dismiss === Swal.DismissReason.cancel
-        ) {
-            swalWithBootstrapButtons.fire({
-                title: "Sikertelen!",
-                text: "Nem sikerült törölni a foglalást:)",
-                icon: "error"
-            });
+            await deleteBooking(foglalasId);
+        } else {
+            Swal.fire("Megszakítva!", "Foglalásod még él :)", "error");
         }
     });
 }
 
-async function loadData() {
-    const res =await fetch ('/api/myBooking', {
-        method: 'GET',
-        credentials: 'include'
-    })
-    if (!res.ok) {
-        console.log("Hiba az API hívásban!");
-        return;
-    }
+async function deleteBooking(id) {
+    const response = await fetch(`/api/deleteBooking/${id}`, {
+        method: 'DELETE',
+    });
 
-    const data = await res.json();
-    console.log("Lekért profiladatok:", data); // Ellenőrzés
-    if (data) {
-        renderBookingtData(data);
+    if (response.ok) {
+        Swal.fire("Törölve!", "Foglalás törölve!", "success");
+        loadBookings();
+    } else {
+        Swal.fire("Hiba!", "Nem sikerült törölni a foglalást.", "error");
     }
-};
-function renderBookingtData(data) {
-    document.getElementById('date').value = data.datum || "";
-    document.getElementById('services').value = data.nev|| "";
-    document.getElementById('price').value = data.ar || "";
-
 }
