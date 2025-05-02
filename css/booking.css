@@ -51,7 +51,9 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
-    cursor: pointer
+    cursor: pointer;
+    margin:auto;
+    border: 3x solid black;
 }
 
 .dropdown-content {
