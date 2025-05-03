@@ -54,8 +54,8 @@ body {
     cursor: pointer;
 }
 .dropdown span {
-    margin:auto;
-    border: 3x solid black;
+    padding:10px;
+    border: 1px solid black;
 }
 
 .dropdown-content {
