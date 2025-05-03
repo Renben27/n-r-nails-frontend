@@ -41,25 +41,28 @@ git clone https://github.com/felhasznalonev/repo-nev.git
 
 ## 👾Backend
 [Itt találod a backendet](https://github.com/Renben27/n-r-nails-backend)
-
+---
+## 🧐Weboldal
+- 👉[Itt megtekintheted az oldalt](https://nandrnails.netlify.app/)
 ---
 ## 🧪Tesztelés
-- Felhasználó login:
-- felhasznalo@gmail.com
-- 123456
+- Felhasználó bejelentkezés:
+  - felhasznalo@gmail.com
+  - 123456
 
-- Admin login:
-- admin@gmail.com
-- 123456
+- Admin bejelentkezés:
+  - admin@gmail.com
+  - 123456
 
-
+---
+## Responzivitás
 - **Mobilon**:
 ![image](https://github.com/user-attachments/assets/a2d819aa-847c-48d1-a229-170ae1be4afc)
 
-- **Tablet**:
+- **Tableten**:
 ![image](https://github.com/user-attachments/assets/76fcd180-14cc-492c-92c6-abc2986a4d03)
 
-- **Asztali**:
+- **Asztali gépen**:
 ![image](https://github.com/user-attachments/assets/07ec2323-3ebc-4d25-ab05-b8a5686029cd)
 
 ---
@@ -84,12 +87,12 @@ N-R-NAILS-FRONTEND/
 │   ├── Aourworks.html
 │   ├── Apersonaldata.html
 │   ├── Aservices.html
-│   ├── Aservices1.html
-│   ├── Aservices2.html
 │   ├── Aservices3.html
 │   ├── Aservices4.html
 │   ├── Aservices5.html
-│   └── Aservices6.html
+│   ├── Aservices6.html
+│   ├── Aservices7.html
+│   └── Aservices8.html
 ├── Adminjs/
 │   ├── Aaboutus.js
 │   ├── Acontact.js
@@ -143,12 +146,12 @@ N-R-NAILS-FRONTEND/
 ├── personaldata.html
 ├── registration.html
 ├── services.html
-├── services1.html
-└── services2.html
-└── services3.html
+├── services3.html
 └── services4.html
 └── services5.html
 └── services6.html
+└── services7.html
+└── services8.html
 ```
 
 
@@ -165,7 +168,7 @@ N-R-NAILS-FRONTEND/
 ---
 ## ⌚Jövőbeli fejlesztések
 - Egy interaktív „tervezd meg a körmöd” modul, ahol a vendégek online kiválaszthatják és kombinálhatják a színeket, formákat, díszítéseket (pl. strassz, ombre, minta), majd elmenthetik vagy elküldhetik időpontfoglaláskor a körmösnek.
-- Törzsvendég program / pontgyűjtő rendszer ahol minden foglalás után pontokat kap a vendég, amit kedvezményre válthat.
+- Véleményekhez való hozzászólási lehetőség, chat rész kialakítása.
 - SMS vagy e-mail emlékeztetők ahol a vendég foglalás előtt automatikusan emlékeztetőt küld a rendszer.
 
 ---
@@ -177,7 +180,6 @@ N-R-NAILS-FRONTEND/
 - [SweetAlert](https://sweetalert2.github.io/)
 - [Code Icon](https://fontawesome.com/icons/code?s=solid)
 - [Google Font](https://fonts.google.com/)
-- 👉[Itt megtekintheted az oldalt](https://nandrnails.netlify.app/)
 
 
 
