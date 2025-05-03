@@ -76,19 +76,18 @@ input {
     outline: none;
 }
 
-@media screen and (max-width: 428px) {
-    .reg, .input {
-        width: 350px;
-    }
-}
-
-@media screen and (max-height: 430px) {
-    .tarolo {
-        height: 100%;
-        justify-content: flex-start;
-    }
-}
-
 .logo-img {
     height: 300px;
+}
+
+@media screen and (max-width: 810px) {
+    .tarolo {
+        justify-content: flex-start;
+    }
+    .logo-img {
+        height: 150px;
+    }
+    .reg, .input {
+        width: 250px;
+    }
 }
