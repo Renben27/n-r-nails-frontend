@@ -30,9 +30,8 @@ async function editProfilePsw() {
                 title: `${data.message}`,
                 icon: "success",
                 draggable: false
-            }).then(() => {
-                logout();
-            });
+            })
+            await logout();      
         } else {
             Swal.fire({
                 icon: "error",
