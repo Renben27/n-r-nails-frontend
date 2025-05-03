@@ -87,6 +87,7 @@ function confirmDelete(foglalasId) {
 async function deleteBooking(id) {
     const response = await fetch(`/api/deleteBooking/${id}`, {
         method: 'DELETE',
+        credentials: 'include'
     });
 
     if (response.ok) {
