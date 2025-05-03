@@ -8,8 +8,8 @@
     font-family: "Jim Nightshade", serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
+}
+
 
 body {
     font-weight: 400;
@@ -30,7 +30,8 @@ body {
 }
 
 
-.login, .reg {
+.login,
+.reg {
     background-color: #e7b3e7;
     border-radius: 20px;
     padding: 15px;
@@ -43,11 +44,12 @@ body {
 }
 
 .reg {
-   background-color: #e7b3e7;
-   margin-top: 20px;
+    background-color: #e7b3e7;
+    margin-top: 20px;
 }
 
-#btnLogin, #btnReg {
+#btnLogin,
+#btnReg {
     font-size: 1.5rem;
     color: rgb(0, 0, 0);
     background-color: inherit;
@@ -59,16 +61,24 @@ body {
     color: #000000;
 }
 
-.login:hover, .reg:hover {
+.login:hover,
+.reg:hover {
     transform: scale(1.01);
 }
-
-@media screen and (max-width: 428px) {
-    .login, .reg {
-        width: 350px;
-    }
-}
-
 .logo-img {
     height: 300px;
 }
+
+@media screen and (max-width: 810px) {
+    .tarolo {
+        justify-content: flex-start;
+    }
+    .login,
+    .reg {
+        width: 250px;
+    }
+    .logo-img {
+        height: 150px;
+    }
+}
+
