@@ -52,7 +52,7 @@ body {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    margin: 25px;
+    margin: 10px;
 }
 .dropdown span {
     padding:10px;
