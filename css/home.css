@@ -84,7 +84,7 @@ header {
 }
 
 
-.profile-icon i{
+.profile-icon {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -92,11 +92,14 @@ header {
     margin-top: 15px;
     cursor: pointer;
     transition: ease 500ms;
-    
+    z-index: 1000;
+
 }
+
 .profile-icon:hover {
     transform: scale(1.1);
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -323,20 +326,24 @@ strong {
     overflow-wrap: break-word;
     white-space: normal;
 }
-.name{
+
+.name {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
     font-weight: 800;
     font-size: 20px;
 }
-.date{
+
+.date {
     justify-content: end;
     align-items: flex-end;
     text-align: end;
     color: grey;
 }
-.opinions{
+
+.opinions {
     overflow-wrap: break-word;
 }
+
 #nextBtn {
     background-color: #c99ec2;
     font-size: 20px;
@@ -360,7 +367,7 @@ strong {
 }
 
 @media screen and (max-width: 810px) {
-   
+
 
     .contact-section {
         flex-direction: column;
@@ -436,10 +443,12 @@ strong {
     }
 
     .left-nav a,
-    .right-nav a{
+    .right-nav a {
         font-size: 1.2rem;
     }
-    .hero h1, strong{
+
+    .hero h1,
+    strong {
         font-size: 3rem;
     }
 }
@@ -464,6 +473,7 @@ strong {
         left: 2.2%;
     }
 }
+
 @media screen and (min-width: 1500px) {
     #nextBtn {
         margin-right: 150px;
