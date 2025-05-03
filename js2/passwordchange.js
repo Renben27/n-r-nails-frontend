@@ -26,13 +26,13 @@ async function editProfilePsw() {
         });
         const data = await res.json();
         if (res.ok) {
-            Swal.fire({
+            await Swal.fire({
                 title: `${data.message}`,
-                icon: "success",
+                icon: "Success",
                 draggable: false
-            })
-            await logout();      
-        } else {
+            });
+            await logout();
+        }else {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
@@ -44,7 +44,7 @@ async function editProfilePsw() {
         Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "A két jelszó nem egyezik",
+            text: "A két jelszó nem egyezik!",
             draggable: false
         });
     };
@@ -62,8 +62,8 @@ async function logout() {
     console.log(data);
 
     if (res.ok) {
-        window.location.href = ('./index.html');
+        window.location.href = ('../index.html');
     } else {
-        alert("hiba a kijelentkezéskor");
+        alert("Hiba a kijelentkezéskor!");
     }
 }
