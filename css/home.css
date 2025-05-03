@@ -84,16 +84,19 @@ header {
 }
 
 
-.profile-icon {
+.profile-icon i{
     position: absolute;
     top: 20px;
     right: 20px;
     font-size: 45px;
     margin-top: 15px;
     cursor: pointer;
+    transition: ease 500ms;
     
 }
-
+.profile-icon:hover {
+    transform: scale(1.1);
+}
 nav {
     display: flex;
     justify-content: space-between;
