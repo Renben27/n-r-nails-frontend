@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         color: '#716add',
                         background: '#ebc6eb', // Tetszés szerint cserélheted
                         backdrop: `
-                            rgba(0,0,123,0.4)
+                            rgba(0,0,0,0.4)
                             url("/images/nyan-cat.gif")
                             left top
                             no-repeat
